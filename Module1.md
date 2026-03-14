@@ -17,6 +17,7 @@ This project includes a bubble sort implementation and a performance benchmark c
 
 GitHub repository:  
 https://github.com/malobaidli26/algorithm-analysis-activity
+This activity helped me understand algorithm efficiency and the impact of time complexity on sorting performance.
 
 ## Meeting Notes
 
