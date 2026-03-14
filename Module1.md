@@ -11,7 +11,10 @@
 - Algorithm design activities
 
 ## Meeting Notes
-Notes from tutor guidance, peer discussions, and module-related meetings will be recorded here.
+
+- Discussed the role of computing in society during the seminar.
+- Received feedback from tutor regarding my discussion post.
+- Team members shared ideas about algorithmic thinking.
 
 ## Reflection
 
