@@ -9,6 +9,8 @@
 - Discussion forum contribution
 - Programming practice exercises
 - Algorithm design activities
+- Python practice code:  
+  https://github.com/malobaidli26/msc-ai-eportfolio
 
 ## Meeting Notes
 
