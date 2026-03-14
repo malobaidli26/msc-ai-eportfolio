@@ -1,20 +1,45 @@
 # MSc Artificial Intelligence e-Portfolio
 
-Name: Mariam Ali Al Obaidly  
-Programme: MSc Artificial Intelligence  
-University: University of Essex Online  
+**Name:** Mariam Ali M H Al Obaidly  
+**Programme:** MSc Artificial Intelligence  
+**University:** University of Essex Online  
 
-Welcome to my e-Portfolio. This portfolio documents my learning journey throughout the MSc Artificial Intelligence programme. It includes artefacts, reflections, meeting notes, and evidence of professional skills development across each module.
+Welcome to my e-Portfolio. This site documents my academic development, reflections, and practical artefacts produced throughout my MSc Artificial Intelligence programme.
 
-## Pages
+---
 
-- [About Me](AboutMe.md)
-- [Modules](Modules.md)
-- [Reflection](Reflection.md)
-- [Professional Skills Matrix](ProfessionalSkillsMatrix.md)
-- [Learning Loop](LearningLoop.md)
+## About Me
+Learn more about my background, professional experience, and interests in computing and artificial intelligence.
 
-## Module Pages
+➡️ [View About Me](AboutMe.md)
 
-- [Module 1 – Launch into Computing](Module1.md)
+---
 
+## Current Module
+
+### Module 1 – Launch into Computing
+
+This section contains learning outcomes, artefacts, meeting notes, and reflections related to the module.
+
+➡️ [View Module 1 Page](Module1.md)
+
+---
+
+## Reflection
+This page includes reflective writing analysing my learning experiences across the programme.
+
+➡️ [View Reflection](Reflection.md)
+
+---
+
+## Professional Skills Matrix
+This section tracks the development of professional and technical skills gained during the programme.
+
+➡️ [View Skills Matrix](ProfessionalSkillsMatrix.md)
+
+---
+
+## Learning Loop
+The learning loop connects knowledge across modules and shows how theoretical concepts are applied in practice.
+
+➡️ [View Learning Loop](LearningLoop.md)
