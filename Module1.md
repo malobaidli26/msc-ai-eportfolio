@@ -6,11 +6,17 @@
 - Develop problem-solving and algorithmic thinking skills.
 
 ## Artefacts
-- Discussion forum contribution
-- Programming practice exercises
-- Algorithm design activities
-- Python practice code:  
-  https://github.com/malobaidli26/msc-ai-eportfolio
+
+- Discussion forum contribution about the evolution of computing.
+- Algorithm design activity completed during the module.
+
+### Sorting Algorithm Implementation
+
+As part of the module activities, I implemented and analysed sorting algorithms using Python.  
+This project includes a bubble sort implementation and a performance benchmark comparison.
+
+GitHub repository:  
+https://github.com/malobaidli26/algorithm-analysis-activity
 
 ## Meeting Notes
 
