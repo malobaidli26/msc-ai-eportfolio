@@ -67,4 +67,130 @@
                     <li>Practised R fundamentals: variables, data types (<code>class()</code>), and vectors (<code>c()</code>).</li>
                     <li>Studied Descriptive vs. Inferential Statistics, and the "Big Picture of Statistics" framework (Population, Sample, Statistics, Parameters).</li>
                     <li>Explored the four levels of measurement (Nominal, Ordinal, Interval, Ratio) with R examples using <code>factor()</code>.</li>
-                    <li>Studied measures of location (mean, mode, median) and measures of dispersion (range, IQR, variance, standard
+                    <li>Studied measures of location (mean, mode, median) and measures of dispersion (range, IQR, variance, standard deviation), including the distinction between Population Variance (σ², divided by N) and Sample Variance (S², divided by n−1, Bessel's Correction).</li>
+                    <li>Completed Data Activity 1 using the COVID-19 India dataset (January–March 2020).</li>
+                </ul>
+
+                <h3>Artefacts</h3>
+
+                <p>
+                    <strong>COVID-19 India Dataset Exploration (Data Activity 1)</strong>
+                </p>
+
+                <p>
+                    Loaded and explored a real-world COVID-19 dataset (India, January–March 2020)
+                    using R in Google Colab. Key R functions applied included <code>read.csv()</code>,
+                    <code>ncol()</code>, <code>nrow()</code>, <code>names()</code>, <code>str()</code>,
+                    <code>unique()</code>, <code>length()</code>, <code>as.Date()</code>,
+                    <code>range()</code>, <code>table()</code>, and <code>sort()</code>.
+                </p>
+
+                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+                    <img src="images/Unit1_DataLoading.png" alt="Loading COVID-19 Dataset in R" />
+                </span>
+
+                <p>Key findings:</p>
+                <ul>
+                    <li>Dataset structure: 7 variables, 270 observations.</li>
+                    <li>27 unique states/union territories represented.</li>
+                    <li>Date range: 30 January 2020 – 21 March 2020.</li>
+                    <li>Kerala was the most frequently recorded state (52 entries).</li>
+                </ul>
+
+                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+                    <img src="images/Unit1_Task1.1.png" alt="Task 1.1 Code and Output" />
+                </span>
+
+                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+                    <img src="images/Unit1_Task1.2.png" alt="Task 1.2 Code and Output" />
+                </span>
+
+                <h3>Reflection</h3>
+
+                <p>
+                    This unit built my foundational understanding of statistics and R programming.
+                    I learned to distinguish between descriptive and inferential statistics through
+                    the "Population–Sample–Statistics–Parameters" framework, and understood why
+                    sample variance uses (n−1) as a correction for estimating population variance.
+                    Applying these concepts practically in R, using a real COVID-19 dataset, helped
+                    me connect theoretical statistical concepts with hands-on data exploration — from
+                    checking data types and structure to identifying patterns such as the most
+                    frequently recorded state.
+                </p>
+
+                <hr />
+
+                <h2>Unit 2 – Data Structures in R</h2>
+
+                <h3>Learning Outcomes</h3>
+                <ul>
+                    <li>Understand different types of Data Structures in R.</li>
+                    <li>Start to perform basic algorithms using R.</li>
+                    <li>Explain data frames and various operations on data frames in R.</li>
+                </ul>
+
+                <h3>Learning Activities</h3>
+                <ul>
+                    <li>Studied the six core data structures in R: Vectors, Matrices, Lists, Data Frames, Factors, and Arrays.</li>
+                    <li>Practised basic arithmetic operators in R (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%/%</code>, <code>^</code>, <code>%%</code>) using <code>paste()</code> to display results.</li>
+                    <li>Explored subsetting and sampling vectors, and building matrices using <code>matrix()</code>.</li>
+                    <li>Studied how Lists combine different data types, and how Data Frames (a special case of a list) are the most common structure for statistical analysis.</li>
+                    <li>Practised applying column-wise functions using <code>apply()</code>, <code>lapply()</code>, and <code>sapply()</code>.</li>
+                    <li>Studied Factors as the R implementation of categorical (Nominal/Ordinal) data, and Arrays as a multi-dimensional extension of matrices.</li>
+                    <li>Reviewed the official Unit 2 reading on Descriptive Statistics, covering percentiles, deciles, quartiles, and box plots.</li>
+                    <li>Completed Data Activity 2, performing frequency analysis on the COVID-19 India dataset.</li>
+                </ul>
+
+                <h3>Artefacts</h3>
+
+                <p>
+                    <strong>COVID-19 Recovery Frequency Analysis (Data Activity 2)</strong>
+                </p>
+
+                <p>
+                    Performed a frequency analysis on the COVID-19 India dataset to examine patterns
+                    in recovery reporting between January and March 2020. Key R functions applied
+                    included <code>ifelse()</code>, <code>table()</code>, and <code>prop.table()</code>.
+                </p>
+
+                <p>Key findings:</p>
+                <ul>
+                    <li>Frequency table: 215 daily reports showed no recoveries, 55 showed recoveries reported.</li>
+                    <li>Percentages: approximately 79.6% of daily reports had no recovery cases, while 20.4% included recovery cases.</li>
+                    <li>Created a new binary variable <code>has_recovery</code> (1 = recovery reported, 0 = no recovery), added directly to the dataset.</li>
+                </ul>
+
+                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+                    <img src="images/Unit2_Task1.png" alt="Task 1 - Frequency Table" />
+                </span>
+
+                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+                    <img src="images/Unit2_Task2.png" alt="Task 2 - Percentages" />
+                </span>
+
+                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+                    <img src="images/Unit2_Task3.png" alt="Task 3 - has_recovery Binary Variable" />
+                </span>
+
+                <h3>Reflection</h3>
+
+                <p>
+                    This unit strengthened my understanding of R's data structures, particularly how
+                    data frames organise real-world datasets like the COVID-19 India data used in
+                    Unit 1. Applying frequency analysis in Data Activity 2 helped me understand how
+                    binary variables and proportions can reveal meaningful patterns in early pandemic
+                    reporting — specifically, that the vast majority of daily reports in this early
+                    period showed no recoveries, reflecting how new the outbreak was at the time.
+                </p>
+
+            </div>
+        </section>
+    </div>
+
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
