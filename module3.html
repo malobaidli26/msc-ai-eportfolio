@@ -183,6 +183,71 @@
                     period showed no recoveries, reflecting how new the outbreak was at the time.
                 </p>
 
+                <hr />
+
+                <h2>Unit 3 – Data Management in R</h2>
+
+                <h3>Learning Outcomes</h3>
+                <ul>
+                    <li>Understand how to examine dataset and variables using R (and Python).</li>
+                    <li>Start to convert different variable types.</li>
+                    <li>Understand how to manage missing values.</li>
+                </ul>
+
+                <h3>Learning Activities</h3>
+                <ul>
+                    <li>Studied the different file types R can read (CSV, TXT, TAB, Excel, STATA, SPSS, SAS, .Rdata) and two methods for importing data (code-based and RStudio GUI).</li>
+                    <li>Practised examining whole datasets (<code>View()</code>, <code>names()</code>) and specific variables (<code>str()</code>, <code>class()</code>, <code>head()</code>, <code>summary()</code>).</li>
+                    <li>Studied approaches to handling missing values: Pairwise Deletion vs. Listwise Deletion, and the <code>na.rm</code> argument in R.</li>
+                    <li>Practised converting variable types (<code>as.factor()</code>, <code>as.character()</code>, <code>as.integer()</code>, <code>as.numeric()</code>), including the important two-step conversion required when converting a Factor to Numeric (via Character first).</li>
+                    <li>Reviewed how R saves data using the <code>write()</code> function.</li>
+                    <li>Completed Data Activity 3, creating and analysing new categorical variables on the COVID-19 India dataset.</li>
+                </ul>
+
+                <h3>Artefacts</h3>
+
+                <p>
+                    <strong>COVID-19 Death Reporting and Case Level Analysis (Data Activity 3)</strong>
+                </p>
+
+                <p>
+                    Created and analysed new derived variables on the COVID-19 India dataset. Key R
+                    functions applied included <code>ifelse()</code>, <code>table()</code>,
+                    <code>factor()</code>, <code>cut()</code>, and <code>sort()</code>.
+                </p>
+
+                <p>Key findings:</p>
+                <ul>
+                    <li>Created a binary variable <code>has_deaths</code>, converted to a labelled factor ("No Deaths" / "Deaths Reported"): 245 daily reports showed no deaths, 25 showed deaths reported.</li>
+                    <li>Created a categorical variable <code>case_level</code> (No Cases / Low Cases / Medium Cases / High Cases) based on total confirmed cases (Indian + Foreign nationals).</li>
+                    <li>Built a frequency table for State/Union Territory and identified the top 10 states with the highest number of daily reports, with Kerala remaining the most frequently recorded state.</li>
+                </ul>
+
+                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+                    <img src="images/Unit3_Task1-3.png" alt="Task 1-3 - has_deaths Binary and Factor" />
+                </span>
+
+                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+                    <img src="images/Unit3_Task4.png" alt="Task 4 - case_level Categorical Variable" />
+                </span>
+
+                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+                    <img src="images/Unit3_Task5-6.png" alt="Task 5-6 - State Frequency and Top 10 States" />
+                </span>
+
+                <h3>Reflection</h3>
+
+                <p>
+                    This unit deepened my understanding of practical data management in R,
+                    particularly the workflow of examining, converting, and deriving new variables
+                    from raw data. Creating the <code>has_deaths</code> and <code>case_level</code>
+                    variables reinforced how binary and categorical variables can be constructed from
+                    numerical data using <code>ifelse()</code> and <code>cut()</code>, and how
+                    converting these into labelled factors makes the data more interpretable. This
+                    built directly on the frequency analysis skills from Unit 2, applying them to a
+                    new dimension of the COVID-19 dataset.
+                </p>
+
             </div>
         </section>
     </div>
