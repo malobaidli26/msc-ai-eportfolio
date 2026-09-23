@@ -248,6 +248,243 @@
                     new dimension of the COVID-19 dataset.
                 </p>
 
+                <hr />
+
+                <h2>Unit 4 – Probability and Sampling Methods</h2>
+
+                <h3>Learning Outcomes</h3>
+                <ul>
+                    <li>Understand and apply the fundamental rules of probability, including conditional probability.</li>
+                    <li>Identify and apply discrete probability distributions (Binomial, Poisson, Hypergeometric) in R.</li>
+                    <li>Identify and apply continuous probability distributions (Normal, Uniform, Exponential) in R.</li>
+                    <li>Distinguish between biased and unbiased sampling methods.</li>
+                </ul>
+
+                <h3>Learning Activities</h3>
+                <ul>
+                    <li>Studied the fundamentals of probability, including conditional probability.</li>
+                    <li>Studied discrete probability distributions — Binomial, Poisson, and Hypergeometric — and their corresponding R functions.</li>
+                    <li>Studied continuous probability distributions — Normal, Uniform, and Exponential — and their corresponding R functions.</li>
+                    <li>Studied sampling methods: biased approaches (convenience sampling, voluntary response sampling) and unbiased approaches (simple random, stratified random, multi-stage sampling).</li>
+                    <li>Attended Seminar 3 with Dr. Adrian Euler, covering probability distributions, quantiles, the Central Limit Theorem, and Type I/II errors, with an accompanying R script.</li>
+                </ul>
+
+                <h3>Artefacts</h3>
+
+                <p>
+                    <em>[No formative activity completed for this unit.]</em>
+                </p>
+
+                <hr />
+
+                <h2>Unit 5 – Producing Plots and Introduction to Calculus in R</h2>
+
+                <h3>Learning Outcomes</h3>
+                <ul>
+                    <li>Produce and interpret a range of plot types in R (bar, histogram, pie, scatter, boxplot, line).</li>
+                    <li>Understand the basic principles of differentiation and integration and their application in R.</li>
+                </ul>
+
+                <h3>Learning Activities</h3>
+                <ul>
+                    <li>Studied how to produce plots in R, including bar charts, histograms, pie charts, scatter plots, boxplots, and line graphs.</li>
+                    <li>Studied an introduction to calculus in R, covering basic differentiation and integration.</li>
+                    <li>Completed the initial post for Collaborative Discussion 1 (Units 5-7): redesigned Table II from Brown (1994) — reporting 550 GPs' responses to 24 statements on intrapartum care — as a set of stacked bar charts produced in R using <code>barplot()</code>.</li>
+                    <li>Completed Data Activity 4 using the COVID-19 India dataset, producing a bar chart, pie chart, histogram, and line chart in R.</li>
+                </ul>
+
+                <h3>Artefacts</h3>
+
+                <p>
+                    <strong>1. Redesigning Brown (1994) Table II as Stacked Bar Charts (Collaborative Discussion 1 — Initial Post)</strong>
+                </p>
+
+                <p>
+                    Table II in Brown's (1994) study reports how 550 general practitioners (GPs)
+                    responded to 24 statements about intrapartum care, each split into Agree, No
+                    opinion, and Disagree — 72 individual figures in one table. To make this more
+                    accessible to a general reader, the underlying question behind each statement was
+                    grouped into three themes: barriers discouraging GPs from providing intrapartum
+                    care themselves, attitudes towards patient choice and place of birth, and views on
+                    training, professional roles, and remuneration. Each theme was recreated as a
+                    stacked bar chart in R using <code>barplot()</code>, plotting the three response
+                    categories against each statement.
+                </p>
+
+                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+                    <img src="images/Barriers_to_Providing_Intrapartum_Care.png" alt="Figure 1 - Barriers to Providing Intrapartum Care (n=550 GPs)" />
+                </span>
+                <p><em>Figure 1. Barriers to Providing Intrapartum Care (n=550 GPs)</em></p>
+
+                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+                    <img src="images/Views_on_Patient_Choice_and_Place_of_Birth.png" alt="Figure 2 - Views on Patient Choice and Place of Birth (n=550 GPs)" />
+                </span>
+                <p><em>Figure 2. Views on Patient Choice and Place of Birth (n=550 GPs)</em></p>
+
+                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+                    <img src="images/Views_on_Training__Roles__and_Remuneration.png" alt="Figure 3 - Views on Training, Professional Roles, and Remuneration (n=550 GPs)" />
+                </span>
+                <p><em>Figure 3. Views on Training, Professional Roles, and Remuneration (n=550 GPs)</em></p>
+
+                <p>Key findings:</p>
+                <ul>
+                    <li>Figure 1 shows workload (83%), disruption to personal life (75%), and fear of litigation (69%) as the most widely agreed-upon reasons GPs avoid offering more intrapartum care.</li>
+                    <li>Figure 2 exposes a contradiction: 71% agreed a woman should not be removed from a GP's list for wanting a home birth, yet 74% disagreed that GPs should be personally obliged to arrange one.</li>
+                    <li>Figure 3 shows a similar pattern: 92% agreed that GPs wanting to provide full intrapartum care should be enabled to, but only 23% personally wanted to offer more themselves.</li>
+                </ul>
+
+                <h3>Reflection</h3>
+
+                <p>
+                    This task changed how I think about simplifying data. Reducing a large table does
+                    not have to mean losing detail — grouping by a clear, consistent theme preserved
+                    the detail while making it far more accessible, directly resolving the concern
+                    that the original table's density made it hard to identify meaningful patterns. It
+                    also confirmed that the type of visualisation should match the structure of the
+                    data: since the responses were categorical, a bar chart suited them better than a
+                    scatter plot or histogram would have.
+                </p>
+
+                <p>
+                    <strong>2. Plotting the COVID-19 India Dataset (Data Activity 4)</strong>
+                </p>
+
+                <p>
+                    Produced four plot types in R on the COVID-19 India dataset (n = 270): a bar chart
+                    of report frequency by state/union territory, a pie chart of case severity levels
+                    (derived from <code>ConfirmedIndianNational</code> and
+                    <code>ConfirmedForeignNational</code>), a histogram of recovery numbers
+                    (<code>Cured</code>), and a line chart of the cumulative trend of total confirmed
+                    cases over time. Key R functions applied included <code>barplot()</code>,
+                    <code>pie()</code>, <code>cut()</code>, <code>hist()</code>,
+                    <code>aggregate()</code>, <code>cumsum()</code>, and <code>plot()</code>.
+                </p>
+
+                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+                    <img src="images/activity4.png" alt="Data Activity 4 - Bar Chart, Pie Chart, Histogram, and Line Chart" />
+                </span>
+
+                <p>Key findings:</p>
+                <ul>
+                    <li>Kerala was the most frequently recorded state (52 reports), followed by Telengana and Delhi (20 each), Rajasthan (19), and Uttar Pradesh and Haryana (18 each).</li>
+                    <li>Case severity was concentrated at the low end: 65.6% of reports fell into the Low Cases (1-5) band, 27.8% into Medium (6-20), and 6.7% into High (21+).</li>
+                    <li>Recovery numbers were heavily right-skewed: 215 of 270 reports (79.6%) recorded zero cured cases, consistent with the <code>has_recovery</code> finding from Data Activity 2.</li>
+                    <li>The cumulative confirmed-cases trend was flat through February, then rose sharply from early March, reaching 1,858 total confirmed cases by 21 March 2020.</li>
+                </ul>
+
+                <h3>Reflection</h3>
+
+                <p>
+                    This activity highlighted how the same dataset can tell different stories depending
+                    on which plot type is used. The bar chart and pie chart both worked with the
+                    cross-sectional structure of the data (frequencies at a point in time), while the
+                    line chart was the only one able to reveal the exponential growth pattern typical
+                    of an early-stage outbreak — a pattern that would have been invisible in a static
+                    summary table. Building the <code>CaseSeverity</code> variable also required a
+                    judgement call, since the activity did not specify exact thresholds for "low",
+                    "medium", and "high" case counts; this was a useful reminder that some analytical
+                    decisions are left to the analyst and should be stated explicitly rather than
+                    presented as if they were a fixed rule.
+                </p>
+
+                <hr />
+
+                <h2>Unit 6 – Statistical Inference, Confidence Intervals, and Hypothesis Testing</h2>
+
+                <h3>Learning Outcomes</h3>
+                <ul>
+                    <li>Use confidence intervals for the statistical interpretation of data.</li>
+                    <li>Perform statistical analysis using a null or alternative hypothesis.</li>
+                    <li>Take a decision based on p-value and statistical significance.</li>
+                </ul>
+
+                <h3>Learning Activities</h3>
+                <ul>
+                    <li>Re-introduced inferential statistics and the Normal distribution, building on Unit 1.</li>
+                    <li>Studied confidence intervals and test statistics.</li>
+                    <li>Studied the null and alternative hypotheses, and the significance level and p-value.</li>
+                    <li>Completed two Peer Responses (max 300 words each) to the Collaborative Discussion 1 initial post from Unit 5.</li>
+                    <li>Attempted the Statistics Quiz.</li>
+                </ul>
+
+                <h3>Artefacts</h3>
+
+                <p>
+                    <em>[No submittable artefact for this unit — the Peer Responses and Statistics Quiz are not recorded as separate portfolio artefacts.]</em>
+                </p>
+
+                <hr />
+
+                <h2>Unit 7 – Parametric Tests</h2>
+
+                <h3>Learning Outcomes</h3>
+                <ul>
+                    <li>Apply parametric hypothesis tests, including the one-sample t-test, two-sample independent t-test, and paired t-test.</li>
+                    <li>Apply one-way ANOVA to compare means across more than two groups.</li>
+                    <li>Test for normality using the Shapiro-Wilk test.</li>
+                    <li>Apply the statistical knowledge developed across Units 1-7 in a timed, single-sitting assessment.</li>
+                </ul>
+
+                <h3>Learning Activities</h3>
+                <ul>
+                    <li>Studied the one-sample t-test, two-sample independent t-test, and paired t-test.</li>
+                    <li>Studied one-way ANOVA for comparing means across multiple groups.</li>
+                    <li>Studied the Shapiro-Wilk test for assessing normality.</li>
+                    <li>Worked through all eight topics in Dr. Adrian Euler's "Preparation for the Test" document, including the solved examples and practice problems A–H.</li>
+                    <li>Completed the 300-word Summary Post for Collaborative Discussion 1, responding to peer feedback on the initial post.</li>
+                    <li>Sat the Mathematical Test (25% of the module grade): a one-hour, single-sitting exam covering theory and calculation, completed by hand with a calculator and no R code.</li>
+                    <li>Completed Data Activity 5 using the Health_Data dataset in R (via Google Colab), covering descriptive statistics, a five-number summary with boxplot, and an independent two-sample t-test.</li>
+                </ul>
+
+                <h3>Artefacts</h3>
+
+                <p>
+                    <strong>Health_Data Descriptive and Inferential Analysis (Data Activity 5)</strong>
+                </p>
+
+                <p>
+                    Analysed the Health_Data dataset (n = 210) in R using the <code>haven</code> package
+                    to import the SPSS (.sav) file. Calculated mean, median, and mode for the variables
+                    <code>sbp</code>, <code>dbp</code>, and <code>income</code> (using a custom
+                    <code>getmode()</code> function, since R has no built-in mode function), produced a
+                    five-number summary and boxplot for <code>income</code>, and ran an independent
+                    two-sample t-test to examine the association between systolic blood pressure (sbp)
+                    and the presence or absence of peptic ulcer, after checking normality
+                    (<code>shapiro.test()</code>) and equality of variances (<code>var.test()</code>).
+                </p>
+
+                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+                    <img src="images/activity5.png" alt="Data Activity 5 - Health_Data R Output" />
+                </span>
+
+                <p>Key findings:</p>
+                <ul>
+                    <li>sbp: Mean = 127.73, Median = 123, Mode = 120.</li>
+                    <li>dbp: Mean = 82.77, Median = 82, Mode = multimodal (74, 80, and 82 each occurring 13 times).</li>
+                    <li>income: Mean = 85,194.49, Median = 86,560.5; no meaningful mode, as values were essentially unique.</li>
+                    <li>Income five-number summary: Min = 52,933, Q1 = 68,636.5, Median = 86,560.5, Q3 = 99,696.25, Max = 117,210; no outliers were identified using the 1.5×IQR rule.</li>
+                    <li>Independent two-sample t-test (sbp by peptic ulcer status): t = 1.277, df = 208, p = 0.203 — no statistically significant association between sbp and the presence of peptic ulcer in this sample.</li>
+                </ul>
+
+                <h3>Reflection</h3>
+
+                <p>
+                    This unit connected the theory of hypothesis testing directly to a practical
+                    dataset. Working through Data Activity 5 required identifying that sbp is a
+                    continuous variable and peptic ulcer status is a two-level categorical variable,
+                    which made the independent two-sample t-test the appropriate choice. Writing a
+                    custom mode function also taught me an important lesson about R: my first version
+                    used <code>which.max()</code>, which silently returns only the first value when
+                    several values are tied for the highest frequency. This produced a technically
+                    valid but incomplete answer for <code>dbp</code>, masking the fact that it is
+                    actually multimodal. Correcting the function to return all tied modes reinforced
+                    that code can run without error while still giving an incomplete result. The
+                    Shapiro-Wilk test also showed that one of the two groups was not normally
+                    distributed, which was a useful reminder that real datasets rarely meet textbook
+                    assumptions perfectly, though the large sample size still supported using a
+                    parametric test in practice.
+                </p>
+
             </div>
         </section>
     </div>
