@@ -487,6 +487,77 @@
 
             </div>
         </section>
+        <section id="unit8">
+  <h2>Unit 8: Nonparametric Tests</h2>
+
+  <h3>Learning Outcomes</h3>
+  <ul>
+    <li>Demonstrate application of nonparametric tests after assessing the normality test.</li>
+    <li>Understand and perform nonparametric tests using R functions.</li>
+    <li>Explain the results of nonparametric tests.</li>
+  </ul>
+
+  <h3>Learning Activities</h3>
+  <p>
+    Completed Data Activity 6 using the Health_Data dataset, covering three tasks:
+    calculating the mean, median, and mode of the <code>age</code> variable;
+    testing whether median diastolic blood pressure (dbp) differs between diabetic
+    and non-diabetic participants using the Mann-Whitney U test, after confirming
+    non-normality in one group via Shapiro-Wilk; and testing whether systolic blood
+    pressure (sbp) differs across four occupational groups (Govt Job, Private Job,
+    Business, Others) using the Kruskal-Wallis test.
+  </p>
+
+  <p><strong>Full R Code:</strong></p>
+  <pre><code>library(haven)
+health_data &lt;- read_sav("/content/Health Data.sav")
+
+getmode &lt;- function(v) {
+  uniqv &lt;- unique(v)
+  freq &lt;- tabulate(match(v, uniqv))
+  uniqv[freq == max(freq)]
+}
+
+mean(health_data$age); median(health_data$age); getmode(health_data$age)
+
+names(health_data)
+table(health_data$diabetes)      # 1 = Yes, 2 = No
+str(health_data$diabetes)
+
+shapiro.test(health_data$dbp[health_data$diabetes == 1])
+shapiro.test(health_data$dbp[health_data$diabetes == 2])
+wilcox.test(dbp ~ diabetes, data = health_data)
+
+table(health_data$occupation)
+str(health_data$occupation)
+kruskal.test(sbp ~ occupation, data = health_data)</code></pre>
+
+  <p><strong>Results:</strong></p>
+  <ul>
+    <li>Age: Mean = 26.51, Median = 27, Mode = 26</li>
+    <li>Mann-Whitney U (dbp by diabetes): W = 3804.5, p = 0.7999 → fail to reject H0; no significant difference in median dbp between diabetic and non-diabetic participants.</li>
+    <li>Kruskal-Wallis (sbp by occupation): chi-squared = 0.779, df = 3, p = 0.8545 → fail to reject H0; no significant difference in sbp across occupational groups.</li>
+  </ul>
+
+  <h3>Artefacts</h3>
+  <img src="images/activity6.png" alt="Data Activity 6 - R code and output" style="max-width:700px;">
+
+  <h3>Reflection</h3>
+  <p>
+    This activity extended the parametric testing from Unit 7 to nonparametric
+    alternatives. Both test choices were driven by the Shapiro-Wilk normality
+    results: the diabetic-status comparison used Mann-Whitney U after one group
+    (non-diabetic) failed the normality assumption (p = 0.0002865), while
+    Kruskal-Wallis was applied across the four occupational groups without
+    individually confirming normality for each subgroup, reinforcing the more
+    cautious, distribution-free approach nonparametric tests allow. A practical
+    lesson was the importance of verifying exact column names and coding
+    (<code>diabetes</code>, coded 1 = Yes / 2 = No) with <code>names()</code> and
+    <code>str()</code> before running any test — an error assuming a column named
+    <code>diabetic</code> with text values "Yes"/"No" initially caused the code to
+    fail silently.
+  </p>
+</section>
     </div>
 
 </div>
