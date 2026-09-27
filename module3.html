@@ -544,4 +544,59 @@
                     lesson was the importance of verifying exact column names and coding
                     (<code>diabetes</code>, coded 1 = Yes / 2 = No) with <code>names()</code> and
                     <code>str()</code> before running any test — an initial assumption that the column
-                    was named
+                    was named <code>diabetic</code> with text values "Yes"/"No" caused the code to fail
+                    silently.
+                </p>
+
+                <p>
+                    <strong>2. Scenario-Based Exercise — 95% Confidence Interval (Vendor Training Efficiency)</strong>
+                </p>
+
+                <p>
+                    An HR organisation trained three groups of employees (n = 7 each) using three
+                    different vendors, and the task was to compare each vendor's mean training
+                    efficiency and determine which vendor showed a significantly higher improvement
+                    at the 95% confidence level. Group means were calculated, normality was checked
+                    for each vendor using the Shapiro-Wilk test, and — since all three groups were
+                    normally distributed — a one-way ANOVA was applied, followed by a Tukey HSD
+                    post-hoc test to identify exactly which vendor(s) differed significantly.
+                </p>
+
+                <p>Key findings:</p>
+                <ul>
+                    <li>Mean efficiency scores: Vendor 1 = 44.71, Vendor 2 = 51.00, Vendor 3 = 27.71.</li>
+                    <li>Shapiro-Wilk normality test: Vendor 1 (p = 0.4728), Vendor 2 (p = 0.7896), Vendor 3 (p = 0.7426) — all three groups normally distributed, supporting the use of one-way ANOVA.</li>
+                    <li>One-way ANOVA: F = 19.64, df = (2, 18), p = 2.98e-05 — a statistically significant difference exists among the three vendor means.</li>
+                    <li>Tukey HSD post-hoc test: Vendor 3 scored significantly lower than both Vendor 1 (p = 0.0009) and Vendor 2 (p = 0.0000286), while the difference between Vendor 1 and Vendor 2 was not statistically significant (p = 0.257).</li>
+                </ul>
+
+                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+                    <img src="images/activitych8.png" alt="Scenario-Based Exercise - Vendor Training ANOVA Output" />
+                </span>
+
+                <h3>Reflection</h3>
+
+                <p>
+                    This exercise reinforced the importance of checking assumptions before choosing a
+                    test rather than defaulting to the nonparametric approach used earlier in this
+                    unit: because all three vendor groups passed the Shapiro-Wilk normality test, the
+                    parametric one-way ANOVA was the correct choice here, even within a unit focused
+                    on nonparametric methods. It also highlighted why a significant ANOVA result is
+                    not the end of the analysis — the F-test only confirms that a difference exists
+                    somewhere among the groups, and the Tukey HSD post-hoc test was needed to pinpoint
+                    that Vendor 3 was the clear underperformer, while the higher raw mean for Vendor 2
+                    over Vendor 1 was not, in fact, statistically significant given the small sample
+                    size per group (n = 7).
+                </p>
+
+            </div>
+        </section>
+    </div>
+
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
