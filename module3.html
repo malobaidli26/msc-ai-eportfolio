@@ -501,6 +501,7 @@
                     <li>Studied the rationale for nonparametric tests: used when the quantitative dependent variable is not normally distributed, or when data are measured on nominal/ordinal scales.</li>
                     <li>Studied the nonparametric-parametric equivalence table: Mann-Whitney U (↔ independent-samples t-test), Wilcoxon Signed Ranks (↔ paired t-test), Kruskal-Wallis (↔ one-way ANOVA), and Spearman's correlation (↔ Pearson's correlation).</li>
                     <li>Completed Data Activity 6 using the Health_Data dataset, covering three tasks: calculating the mean, median, and mode of the <code>age</code> variable; testing whether median diastolic blood pressure (dbp) differs between diabetic and non-diabetic participants using the Mann-Whitney U test, after confirming non-normality in one group via Shapiro-Wilk; and testing whether systolic blood pressure (sbp) differs across four occupational groups (Govt Job, Private Job, Business, Others) using the Kruskal-Wallis test.</li>
+                    <li>Completed a Scenario-Based Exercise comparing the training efficiency of three vendors, calculating group means, testing normality for each group, and applying one-way ANOVA with a Tukey HSD post-hoc test to identify which vendor(s) differed significantly at the 95% confidence level.</li>
                 </ul>
 
                 <h3>Artefacts</h3>
@@ -543,18 +544,4 @@
                     lesson was the importance of verifying exact column names and coding
                     (<code>diabetes</code>, coded 1 = Yes / 2 = No) with <code>names()</code> and
                     <code>str()</code> before running any test — an initial assumption that the column
-                    was named <code>diabetic</code> with text values "Yes"/"No" caused the code to fail
-                    silently.
-                </p>
-
-            </div>
-        </section>
-    </div>
-
-</div>
-
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/main.js"></script>
-
-</body>
-</html>
+                    was named
