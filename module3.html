@@ -812,6 +812,80 @@
                     rather than replace a direct measurement. The equation is also an estimate from
                     one sample, and it should not be used for sbp values outside the observed range.
                 </p>
+                                <hr />
+
+                <h2>Unit 12 – Bayesian Data Analysis</h2>
+
+                <h3>Learning Outcomes</h3>
+                <ul>
+                    <li>Know the importance of Bayesian data analysis.</li>
+                    <li>Explore the features of Bayes' Theorem.</li>
+                    <li>Assess the strengths and limitations of Bayesian data analysis.</li>
+                </ul>
+
+                <h3>Learning Activities</h3>
+                <ul>
+                    <li>Studied Bayes' Theorem as a way of updating a prior probability with new data (the likelihood) to obtain a posterior probability: posterior ∝ prior × likelihood.</li>
+                    <li>Studied the four steps of a Bayesian analysis: designing a model for the data, specifying a prior distribution for its parameters, calculating the posterior distribution from the model and the data, and summarising and visualising the posterior.</li>
+                    <li>Compared Bayesian and frequentist inference: frequentist methods such as p-values and confidence intervals treat the data as repeatable and the parameters as fixed, P(data | parameters), while Bayesian methods treat the parameters as uncertain and the observed data as fixed, P(parameters | data).</li>
+                    <li>Reviewed the strengths and limitations of Bayesian analysis, including the ability to quantify evidence for the null hypothesis using a Bayes factor, the critique of p-values (Gigerenzer, 2004), its greater flexibility, and its greater complexity.</li>
+                    <li>Completed the Bayes' Probability Activity using recovery reporting in Kerala and Delhi from the COVID-19 India dataset.</li>
+                </ul>
+
+                <h3>Artefacts</h3>
+
+                <p>
+                    <strong>Bayes' Theorem Applied to COVID-19 Recovery Reports (Bayes' Probability Activity)</strong>
+                </p>
+
+                <p>
+                    Using the counts given in the activity (270 daily state reports, of which 52 came
+                    from Kerala and 20 from Delhi; 55 reports showed recoveries, 19 from Kerala and 8
+                    from Delhi), the basic and conditional probabilities were calculated by hand and
+                    verified in R. Bayes' Theorem was then used to find the probability that a
+                    report showing recoveries came from Kerala.
+                </p>
+
+                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+                    <img src="images/bayes_activity.png" alt="Bayes' Probability Activity - R calculation output" />
+                </span>
+
+                <p>Key findings:</p>
+                <ul>
+                    <li>P(Kerala) = 52 / 270 = 0.193 (19.3%).</li>
+                    <li>P(Recovery) = 55 / 270 = 0.204 (20.4%).</li>
+                    <li>P(Recovery | Kerala) = 19 / 52 = 0.365 (36.5%).</li>
+                    <li>P(Recovery | Delhi) = 8 / 20 = 0.400 (40.0%).</li>
+                    <li>Bayes' Theorem: P(Kerala | Recovery) = P(Recovery | Kerala) × P(Kerala) / P(Recovery) = (0.365 × 0.193) / 0.204 = 0.345 (34.5%), which matches the direct count of 19 / 55.</li>
+                    <li>In plain terms: Kerala produced about one in five of all reports, but about one in three of the reports that showed recoveries.</li>
+                </ul>
+
+                <h3>Reflection</h3>
+
+                <p>
+                    This activity made the language of Bayes' Theorem concrete. The prior, P(Kerala)
+                    = 19.3%, was updated by the evidence that a report showed recoveries, giving a
+                    posterior of 34.5%, so knowing about the recovery almost doubled the probability
+                    that the report came from Kerala. The comparison with Delhi was the most useful
+                    part for me. Delhi had a higher recovery rate per report (40.0% against 36.5%),
+                    yet only 8 of the 55 recovery reports came from Delhi, because Delhi reported far
+                    less often. A higher conditional probability does not mean a larger share of the
+                    outcome; the base rate matters just as much. The same caution from Unit 9 also
+                    applies here: these reports are repeated daily, cumulative records rather than
+                    independent cases, so the probabilities describe reports, not patients.
+                </p>
+
+                <p>
+                    The unit also changed how I look back at my earlier results. In Data Activities
+                    5 and 6, three of my tests ended with "fail to reject H₀" (p = 0.203, 0.800 and
+                    0.855). Within the frequentist approach, I could only say that there was not
+                    enough evidence of a difference. The Bayesian idea of a Bayes factor offers a way
+                    to measure evidence in favour of the null hypothesis as well. At the same time,
+                    the choice of prior adds another judgement that must be justified, which explains
+                    why Bayesian methods are more complex to apply. Updating a belief as new evidence
+                    arrives is also familiar from my work in network engineering, where an initial
+                    assumption about the cause of a fault is revised as monitoring data comes in.
+                </p>
             </div>
         </section>
     </div>
