@@ -588,7 +588,85 @@
                     over Vendor 1 was not, in fact, statistically significant given the small sample
                     size per group (n = 7).
                 </p>
+                <hr />
 
+                <h2>Unit 9 – Cross-tabulations and Chi-square Analysis</h2>
+
+                <h3>Learning Outcomes</h3>
+                <ul>
+                    <li>Understand and assess the association between two categorical variables.</li>
+                    <li>Create subsamples and derived categorical variables using R functions.</li>
+                    <li>Perform and interpret chi-square analysis on a contingency table.</li>
+                </ul>
+
+                <h3>Learning Activities</h3>
+                <ul>
+                    <li>Studied cross-tabulation (contingency tables) as a way of presenting counts for combinations of categories, and how the hypothesis is framed as independence between the row and column variables.</li>
+                    <li>Studied the chi-square (χ²) test as a nonparametric test for count data, comparing observed counts with the counts expected under the null hypothesis of independence, with degrees of freedom of (rows − 1) × (columns − 1).</li>
+                    <li>Practised building a contingency table and running <code>chisq.test()</code> on the Superstore dataset (Segment × Category) as a warm-up: χ² = 1.148, df = 4, p = 0.887, so no association was found.</li>
+                    <li>Completed Data Activity 7 using the COVID-19 India dataset, producing two cross-tables: Region × Case Severity Level, and Case Severity Level × Recovery Status.</li>
+                </ul>
+
+                <h3>Artefacts</h3>
+
+                <p>
+                    <strong>COVID-19 India Cross-tabulation and Chi-square Analysis (Data Activity 7)</strong>
+                </p>
+
+                <p>
+                    Three categorical variables were derived from the COVID-19 India dataset (n = 270).
+                    <code>Region</code> grouped each state or union territory into North, Central,
+                    East, West or South, following India's Zonal Councils. <code>CaseSeverity</code>
+                    grouped total confirmed cases (Indian + Foreign nationals) into Low (1–5),
+                    Medium (6–20) and High (21+), the same thresholds used in Data Activity 4.
+                    <code>RecoveryStatus</code> split the <code>Cured</code> variable into No
+                    Recovery (0) and Recovered (1+), following the <code>has_recovery</code> logic
+                    from Data Activity 2. Cross-tables were built with <code>table()</code> and
+                    <code>addmargins()</code>, row percentages with <code>prop.table()</code>, and
+                    association was tested with <code>chisq.test()</code>. Because some expected
+                    counts fell below 5, Fisher's exact test (<code>fisher.test()</code>) was added
+                    as a check; this test was my own addition beyond the unit material.
+                </p>
+
+                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+                    <img src="images/activity7_task1.png" alt="Data Activity 7 - Region x Case Severity cross-table and chi-square output" />
+                </span>
+
+                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+                    <img src="images/activity7_task2.png" alt="Data Activity 7 - Case Severity x Recovery Status chi-square and Fisher's exact test output" />
+                </span>
+
+                <p>Key findings:</p>
+                <ul>
+                    <li>Region × Case Severity: χ² = 70.11, df = 8, p &lt; 0.001; Fisher's exact test (simulated, 10,000 replicates) p &lt; 0.001. The West had the highest share of High-severity reports (46.7%), all East reports were Low (100%), and Central reports were mostly Medium (55.2%).</li>
+                    <li>Case Severity × Recovery Status: χ² = 45.73, df = 2, p &lt; 0.001; Fisher's exact test p &lt; 0.001. The share of reports with recoveries rose with severity: Low 9.0%, Medium 37.3%, High 61.1%.</li>
+                    <li>Five of the 15 expected counts in the first table, and one of the six in the second (High × Recovered = 3.7), were below 5, which triggered R's warning that the chi-square approximation may be incorrect.</li>
+                </ul>
+
+                <h3>Reflection</h3>
+
+                <p>
+                    This activity showed me that a very small p-value is only the start of the
+                    interpretation. Both tables showed strong associations, but the second result
+                    does not mean that states with more cases recover better. The counts in this
+                    dataset are cumulative, so a state with many cases has usually been reporting
+                    for longer, which leaves more time for recoveries to appear. Time is acting as a
+                    confounding variable here. The same states also appear on many different days,
+                    so the reports are not fully independent, which weakens one of the chi-square
+                    test's own assumptions.
+                </p>
+
+                <p>
+                    Two practical lessons stood out. First, R warned that the chi-square
+                    approximation may be incorrect, and checking the expected counts explained why.
+                    Rather than ignoring the warning, I confirmed the results with Fisher's exact
+                    test. Second, my first run totalled 269 reports instead of 270. The cause was a
+                    misspelt state name in the raw data ("Chattisgarh"), which my region mapping did
+                    not recognise. As in Data Activities 5 and 6, the code ran without an error but
+                    gave an incomplete answer, and only checking the totals revealed it. The region
+                    groups and severity thresholds were also my own decisions, so I have stated them
+                    openly rather than presenting them as fixed rules.
+                </p>
             </div>
         </section>
     </div>
