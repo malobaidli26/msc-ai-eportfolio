@@ -742,6 +742,76 @@
                     measurements were rounded when recorded. This reminded me that plotting the data
                     can show features of how it was collected that a single coefficient hides.
                 </p>
+                                <hr />
+
+                <h2>Unit 11 – Regression Analysis</h2>
+
+                <h3>Learning Outcomes</h3>
+                <ul>
+                    <li>Explain the concept of regression.</li>
+                    <li>Interpret model fit, statistical significance, and coefficient interpretation.</li>
+                    <li>Create scatter plots for model building.</li>
+                    <li>Illustrate the generalised linear model in R.</li>
+                </ul>
+
+                <h3>Learning Activities</h3>
+                <ul>
+                    <li>Studied the difference between correlation and regression: in correlation it does not matter which variable is X and which is Y, but in regression it does, because predicting Y from X gives a different line from predicting X from Y.</li>
+                    <li>Studied least squares regression, residuals, R², and the assumptions of linear regression: linearity, residuals with a mean of zero, constant variance, normally distributed residuals, and independent residuals.</li>
+                    <li>Completed Data Activity 9 using the Health_Data dataset, building a simple linear regression model to predict diastolic blood pressure from systolic blood pressure and interpreting it at the 5% significance level.</li>
+                </ul>
+
+                <h3>Artefacts</h3>
+
+                <p>
+                    <strong>Predicting Diastolic from Systolic Blood Pressure (Data Activity 9)</strong>
+                </p>
+
+                <p>
+                    A simple linear regression model was fitted in R with <code>lm(dbp ~ sbp)</code>
+                    on the Health_Data dataset (n = 210). Results were read with
+                    <code>summary()</code> and <code>confint()</code>. The model assumptions were
+                    then checked using the mean of the residuals, the Anderson-Darling test on the
+                    residuals (<code>ad.test()</code>), and the four diagnostic plots from
+                    <code>plot(model)</code>.
+                </p>
+
+                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+                    <img src="images/activity9.png" alt="Data Activity 9 - Regression output and residual diagnostic plots" />
+                </span>
+
+                <p>Key findings:</p>
+                <ul>
+                    <li>Estimated regression equation: dbp = 19.41 + 0.496 × sbp.</li>
+                    <li>Slope: b₁ = 0.496, 95% CI [0.453, 0.539], t = 22.96, p &lt; 0.001. At the 5% level, H₀ (b₁ = 0) is rejected: systolic BP is a significant predictor of diastolic BP. Each 1 mmHg rise in sbp predicts a rise of about 0.5 mmHg in dbp.</li>
+                    <li>Model fit: R² = 0.717 (adjusted R² = 0.716), so systolic BP explains about 72% of the variation in diastolic BP. F(1, 208) = 527.2, p &lt; 0.001.</li>
+                    <li>Residual standard error = 6.26 mmHg, meaning typical predictions miss the observed value by around 6 mmHg.</li>
+                    <li>Assumption checks: the mean of the residuals was effectively zero; the Anderson-Darling test did not reject normality of the residuals (A = 0.575, p = 0.134); the residual plots showed no clear pattern or change in spread, and no point exceeded Cook's distance.</li>
+                    <li>Example prediction: a patient with sbp = 120 mmHg has a predicted dbp of about 78.9 mmHg.</li>
+                </ul>
+
+                <h3>Reflection</h3>
+
+                <p>
+                    This activity connected directly to Data Activity 8. The R² of 0.717 is the
+                    square of the Pearson correlation found there (0.847² ≈ 0.717), which made the
+                    link between correlation and regression concrete for me rather than just a rule
+                    in the notes. The most important lesson was about where the assumptions apply.
+                    In Unit 10, neither sbp nor dbp was normally distributed, and I first expected
+                    that to be a problem here. However, linear regression assumes that the
+                    residuals are normal, not the variables themselves, and the residuals passed
+                    the Anderson-Darling test.
+                </p>
+
+                <p>
+                    The output also showed me that a significant result is not the same as a precise
+                    one. The slope is highly significant, yet a typical prediction is still around
+                    6 mmHg away from the real value, and about 28% of the variation in diastolic BP
+                    is not explained by systolic BP. In a clinical setting, a 6 mmHg error could
+                    change how a reading is classified, so this model would support a decision
+                    rather than replace a direct measurement. The equation is also an estimate from
+                    one sample, and it should not be used for sbp values outside the observed range.
+                </p>
             </div>
         </section>
     </div>
