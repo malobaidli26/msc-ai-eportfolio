@@ -675,6 +675,73 @@
                     groups and severity thresholds were also my own decisions, so I have stated them
                     openly rather than presenting them as fixed rules.
                 </p>
+                                <hr />
+
+                <h2>Unit 10 – Correlation and Regression</h2>
+
+                <h3>Learning Outcomes</h3>
+                <ul>
+                    <li>Measure the strength and direction of the relationship between two numerical variables.</li>
+                    <li>Check normality before choosing between Pearson's and Spearman's correlation.</li>
+                    <li>Understand the principles of simple linear regression.</li>
+                </ul>
+
+                <h3>Learning Activities</h3>
+                <ul>
+                    <li>Studied correlation as a measure of the relationship between two variables, and the difference between independent and dependent variables.</li>
+                    <li>Studied the Anderson-Darling normality test (<code>ad.test()</code> from the <code>nortest</code> package) as a check before running <code>cor.test()</code>.</li>
+                    <li>Studied simple linear regression, where predictions of Y plotted against X form a straight line.</li>
+                    <li>Completed Data Activity 8 using the Health_Data dataset, measuring the correlation between systolic and diastolic blood pressure and producing a scatter plot.</li>
+                </ul>
+
+                <h3>Artefacts</h3>
+
+                <p>
+                    <strong>Systolic and Diastolic Blood Pressure Correlation (Data Activity 8)</strong>
+                </p>
+
+                <p>
+                    The Health_Data dataset (n = 210) was imported with the <code>haven</code>
+                    package. Normality of <code>sbp</code> and <code>dbp</code> was checked with the
+                    Anderson-Darling test, and the correlation was then measured with
+                    <code>cor.test()</code> using both Pearson's and Spearman's methods. A scatter
+                    plot was produced with <code>plot()</code>, with a fitted regression line added
+                    using <code>abline(lm())</code>.
+                </p>
+
+                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+                    <img src="images/activity8.png" alt="Data Activity 8 - sbp and dbp correlation output and scatter plot" />
+                </span>
+
+                <p>Key findings:</p>
+                <ul>
+                    <li>Anderson-Darling test: neither variable was normally distributed (sbp: A = 2.447, p &lt; 0.001; dbp: A = 1.809, p &lt; 0.001), so Spearman's correlation was treated as the main result.</li>
+                    <li>Spearman's rho = 0.802, p &lt; 0.001: a strong positive relationship between systolic and diastolic blood pressure.</li>
+                    <li>Pearson's r = 0.847, 95% CI [0.804, 0.881], t = 22.96, df = 208, p &lt; 0.001, which closely agreed with the Spearman result.</li>
+                    <li>The scatter plot showed points rising together along the fitted line, with readings grouped in vertical bands at round values such as 120 and 140 mmHg.</li>
+                </ul>
+
+                <h3>Reflection</h3>
+
+                <p>
+                    This activity showed me why the normality check has to come before the choice of
+                    test. Both variables failed the Anderson-Darling test, so Spearman's correlation
+                    was the correct main result, while Pearson's r was reported alongside it as a
+                    check. The two values were close (0.802 and 0.847), which made me more confident
+                    in the finding. I also noticed that, with 210 participants, the p-value alone says
+                    very little, because even a weak correlation would be significant with this many
+                    observations. The strength of r and the narrow confidence interval were more
+                    informative than the p-value itself.
+                </p>
+
+                <p>
+                    A strong correlation does not mean that one pressure causes the other. Both are
+                    readings of the same cardiovascular system, so they are expected to rise
+                    together. The scatter plot also revealed something the numbers did not: many
+                    readings sit on round values such as 120 and 140 mmHg, which suggests the
+                    measurements were rounded when recorded. This reminded me that plotting the data
+                    can show features of how it was collected that a single coefficient hides.
+                </p>
             </div>
         </section>
     </div>
