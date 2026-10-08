@@ -357,7 +357,7 @@
                     (<code>Cured</code>), and a line chart of the cumulative trend of total confirmed
                     cases over time. Key R functions applied included <code>barplot()</code>,
                     <code>pie()</code>, <code>cut()</code>, <code>hist()</code>,
-                    <code>aggregate()</code>, <code>cumsum()</code>, and <code>plot()</code>.
+                    <code>aggregate()</code>, and <code>plot()</code>.
                 </p>
 
                 <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
@@ -369,7 +369,7 @@
                     <li>Kerala was the most frequently recorded state (52 reports), followed by Telengana and Delhi (20 each), Rajasthan (19), and Uttar Pradesh and Haryana (18 each).</li>
                     <li>Case severity was concentrated at the low end: 65.6% of reports fell into the Low Cases (1-5) band, 27.8% into Medium (6-20), and 6.7% into High (21+).</li>
                     <li>Recovery numbers were heavily right-skewed: 215 of 270 reports (79.6%) recorded zero cured cases, consistent with the <code>has_recovery</code> finding from Data Activity 2.</li>
-                    <li>The cumulative confirmed-cases trend was flat through February, then rose sharply from early March, reaching 1,858 total confirmed cases by 21 March 2020.</li>
+                    <li>The cumulative confirmed-cases trend was flat through February, then rose sharply from early March, reaching 283 total confirmed cases by 21 March 2020.</li>
                 </ul>
 
                 <h3>Reflection</h3>
@@ -385,6 +385,14 @@
                     "medium", and "high" case counts; this was a useful reminder that some analytical
                     decisions are left to the analyst and should be stated explicitly rather than
                     presented as if they were a fixed rule.
+                    Note (added in Unit 9): the original line chart applied <code>cumsum()</code>
+                    to values that were already cumulative, which inflated the total to 1,858.
+                    Checking Kerala's daily values in Unit 9 showed the counts never decrease, so
+                    the chart was rebuilt by summing states per day without <code>cumsum()</code>,
+                    giving the correct total of 283. The bar chart also shows that some places
+                    appear under two names (for example, "Ladakh" and "Union Territory of Ladakh"),
+                    because the dataset changed its naming during the period; these were kept as
+                    recorded rather than merged.
                 </p>
 
                 <hr />
