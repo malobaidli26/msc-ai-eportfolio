@@ -1,7 +1,7 @@
 :root{
   --bg:#f5f4f0; --surface:#ffffff; --ink:#1f2f36; --muted:#5f6d73; --line:#e4e2dc;
   --brand:#1f3842; --teal:#2a7a78; --teal-soft:#e3efee; --coral:#e07a5f; --coral-soft:#fbe9e3;
-  --radius:16px; --shadow:0 1px 2px rgba(31,56,66,.06),0 6px 20px rgba(31,56,66,.06);
+  --hero:var(--brand); --hero-eyebrow:#9fd3cf; --hero-sub:#cfe0e3; --glow:rgba(224,122,95,.35); --radius:16px; --shadow:0 1px 2px rgba(31,56,66,.06),0 6px 20px rgba(31,56,66,.06);
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
@@ -37,13 +37,13 @@ img{max-width:100%;height:auto}
 }
 
 /* hero */
-.hero{background:var(--brand);color:#fff;padding:56px 0 64px;position:relative;overflow:hidden}
-.hero::after{content:"";position:absolute;right:-120px;top:-120px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(224,122,95,.35),transparent 70%)}
+.hero{background:var(--hero);color:#fff;padding:56px 0 64px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-120px;top:-120px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,var(--glow),transparent 70%)}
 .hero-sm{padding:44px 0 48px}
 .hero-home{padding:80px 0 88px}
-.eyebrow{margin:0 0 8px;text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:600;color:#9fd3cf}
+.eyebrow{margin:0 0 8px;text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:600;color:var(--hero-eyebrow)}
 .hero h1{margin:0;font-size:clamp(30px,5vw,46px);line-height:1.15;letter-spacing:-.02em}
-.hero-sub{margin:12px 0 0;max-width:640px;color:#cfe0e3;font-size:18px}
+.hero-sub{margin:12px 0 0;max-width:640px;color:var(--hero-sub);font-size:18px}
 .hero-actions{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
 .btn,.btn-outline{display:inline-block;padding:11px 20px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none}
 .btn{background:var(--coral);color:#fff}
@@ -117,3 +117,36 @@ details[open] summary{border-bottom:1px solid var(--line)}
 }
 
 .footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:13px;text-align:center}
+
+.quick{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:8px}
+.quick a{text-decoration:none;color:var(--ink);font-weight:500;font-size:15px;padding:10px 18px;border:1px solid var(--line);border-radius:999px;background:var(--surface)}
+.quick a:hover{border-color:var(--teal);color:var(--teal)}
+.hero-home .wrap{text-align:center}
+.hero-home .hero-sub{margin-left:auto;margin-right:auto}
+.mcard h3{margin-bottom:18px}
+
+/* Lavender theme */
+:root{--bg:#faf9fe;--surface:#ffffff;--ink:#2b2840;--muted:#6c6886;--line:#ebe8f5;--brand:#6a5bd2;--teal:#6a5bd2;--teal-soft:#f1eefc;--coral:#6a5bd2;--coral-soft:#ece8fb;
+--hero:linear-gradient(135deg,#e8e3fb 0%,#f3f0fd 100%);--hero-eyebrow:#6a5bd2;--hero-sub:#5f5a7a;--glow:rgba(255,255,255,0)}
+.hero{color:#2b2840}
+.hero::after{display:none}
+.btn{background:#6a5bd2}
+.mcard-num{color:#f1eefc}
+#ema1 .badge{background:#2b2840;color:#fff}
+.mgrid{grid-template-columns:repeat(4,1fr)}
+@media (max-width:980px){.mgrid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.mgrid{grid-template-columns:1fr}}
+.mgrid .mcard{border:none;box-shadow:none}
+.mgrid .mcard:nth-child(1){background:#e6f6dc}
+.mgrid .mcard:nth-child(2){background:#ddf0fb}
+.mgrid .mcard:nth-child(3){background:#fde3ec}
+.mgrid .mcard:nth-child(4){background:#fdf5c4}
+.mgrid .mcard:nth-child(1) .mcard-label,.mgrid .mcard:nth-child(1) .mcard-go{color:#3f7d27}
+.mgrid .mcard:nth-child(2) .mcard-label,.mgrid .mcard:nth-child(2) .mcard-go{color:#1d6d97}
+.mgrid .mcard:nth-child(3) .mcard-label,.mgrid .mcard:nth-child(3) .mcard-go{color:#b4416c}
+.mgrid .mcard:nth-child(4) .mcard-label,.mgrid .mcard:nth-child(4) .mcard-go{color:#7a6800}
+.mgrid .mcard .mcard-num{color:rgba(255,255,255,.8)}
+.mgrid .mcard:hover{box-shadow:0 12px 28px rgba(43,40,64,.10)}
+.quick a{background:#f1eefc;border-color:#e2dcf8;color:#5146b0}
+.quick a:hover{background:#e7e2fb;border-color:#c9bff4}
+.mgrid .mcard h3{color:#2b2840}
