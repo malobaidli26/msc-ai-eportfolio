@@ -1,113 +1,115 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Module 3</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Module 3 – Numerical Analysis | Mariam Al Obaidly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/modern.css" />
 </head>
-
-<body class="is-preload">
-
-<div id="wrapper">
-
-    <header id="header">
-        <a href="index.html" class="logo">
-            <strong>Mariam Al Obaidly</strong>
-            <span>MSc AI e-Portfolio</span>
-        </a>
-    </header>
-
-    <nav id="menu">
-        <ul class="links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="module1.html">Module 1</a></li>
-            <li><a href="module2.html">Module 2</a></li>
-            <li><a href="module3.html">Module 3</a></li>
-            <li><a href="reflection.html">Reflection</a></li>
-            <li><a href="skills.html">Professional Skills</a></li>
-        </ul>
-    </nav>
-
-    <div id="main" class="alt">
-        <section id="one">
-            <div class="inner">
-
-                <header class="major">
-                    <h1>Module 3</h1>
-                </header>
-
-                <h2>Module Overview</h2>
-
-                <p>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">MA</span><span class="brand-text"><strong>Mariam Al Obaidly</strong><small>MSc AI e-Portfolio</small></span></a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="module1.html">Module 1</a>
+          <a href="module2.html">Module 2</a>
+          <a href="module3.html" class="active" aria-current="page">Module 3</a>
+          <a href="reflection.html">Reflection</a>
+          <a href="skills.html">Skills</a>
+      </nav>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">MSc Artificial Intelligence</p>
+      <h1>Module 3</h1>
+      <p class="hero-sub">Numerical Analysis</p>
+    </div>
+  </section>
+  <main class="wrap page">
+    <section class="card prose overview"><h2>Module Overview</h2>
+<p>
                     The Numerical Analysis module introduces the mathematical and statistical
                     foundations required for data science and Artificial Intelligence. The module
                     focuses on developing the ability to critically evaluate a range of mathematical
                     and statistical methodologies, with all statistical techniques and data analysis
                     performed using the R programming language.
                 </p>
-
-                <hr />
-
-                <h2>Unit 1 – Types and Sources of Data and an Introduction to R</h2>
-
-                <h3>Learning Outcomes</h3>
-                <ul>
-                    <li>Run the R programming language, and the RStudio GUI (via Google Colab).</li>
-                    <li>Identify the difference between Descriptive and Inferential Statistics.</li>
-                    <li>Define and apply nominal, ordinal, interval and ratio measurement scales.</li>
-                    <li>Determine levels of measurement in R.</li>
-                    <li>Understand R functions to perform descriptive statistics analysis.</li>
-                </ul>
-
-                <h3>Learning Activities</h3>
-                <ul>
-                    <li>Set up an R environment using Google Colab (configured to R runtime).</li>
-                    <li>Practised R fundamentals: variables, data types (<code>class()</code>), and vectors (<code>c()</code>).</li>
-                    <li>Studied Descriptive vs. Inferential Statistics, and the "Big Picture of Statistics" framework (Population, Sample, Statistics, Parameters).</li>
-                    <li>Explored the four levels of measurement (Nominal, Ordinal, Interval, Ratio) with R examples using <code>factor()</code>.</li>
-                    <li>Studied measures of location (mean, mode, median) and measures of dispersion (range, IQR, variance, standard deviation), including the distinction between Population Variance (σ², divided by N) and Sample Variance (S², divided by n−1, Bessel's Correction).</li>
-                    <li>Completed Data Activity 1 using the COVID-19 India dataset (January–March 2020).</li>
-                </ul>
-
-                <h3>Artefacts</h3>
-
-                <p>
-                    <strong>COVID-19 India Dataset Exploration (Data Activity 1)</strong>
-                </p>
-
-                <p>
+    </section>
+    <div class="units-head">
+      <h2>Units</h2>
+      <div class="units-tools"><button class="btn-ghost" data-expand="all">Expand all</button><button class="btn-ghost" data-expand="none">Collapse all</button></div>
+    </div>
+    <nav class="chips">
+        <a class="chip" href="#unit-1-types-and-sources-of-data-and-an-introduction-to-r">Unit 1</a>
+        <a class="chip" href="#unit-2-data-structures-in-r">Unit 2</a>
+        <a class="chip" href="#unit-3-data-management-in-r">Unit 3</a>
+        <a class="chip" href="#unit-4-probability-and-sampling-methods">Unit 4</a>
+        <a class="chip" href="#unit-5-producing-plots-and-introduction-to-calculus-in-r">Unit 5</a>
+        <a class="chip" href="#unit-6-statistical-inference-confidence-intervals-and-hypoth">Unit 6</a>
+        <a class="chip" href="#unit-7-parametric-tests">Unit 7</a>
+        <a class="chip" href="#unit-8-nonparametric-tests">Unit 8</a>
+        <a class="chip" href="#unit-9-cross-tabulations-and-chi-square-analysis">Unit 9</a>
+        <a class="chip" href="#unit-10-correlation-and-regression">Unit 10</a>
+        <a class="chip" href="#unit-11-regression-analysis">Unit 11</a>
+        <a class="chip" href="#unit-12-bayesian-data-analysis">Unit 12</a>
+        <a class="chip" href="#ema1">EMA 1</a>
+    </nav>
+    <details class="unit card" id="unit-1-types-and-sources-of-data-and-an-introduction-to-r">
+      <summary><span class="badge">Unit 1</span><span class="unit-title">Types and Sources of Data and an Introduction to R</span><span class="unit-tags"><span class="tag">Learning Outcomes</span><span class="tag">Learning Activities</span><span class="tag">Artefacts</span><span class="tag">Reflection</span></span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="unit-body prose">
+<h3>Learning Outcomes</h3>
+<ul>
+<li>Run the R programming language, and the RStudio GUI (via Google Colab).</li>
+<li>Identify the difference between Descriptive and Inferential Statistics.</li>
+<li>Define and apply nominal, ordinal, interval and ratio measurement scales.</li>
+<li>Determine levels of measurement in R.</li>
+<li>Understand R functions to perform descriptive statistics analysis.</li>
+</ul>
+<h3>Learning Activities</h3>
+<ul>
+<li>Set up an R environment using Google Colab (configured to R runtime).</li>
+<li>Practised R fundamentals: variables, data types (<code>class()</code>), and vectors (<code>c()</code>).</li>
+<li>Studied Descriptive vs. Inferential Statistics, and the "Big Picture of Statistics" framework (Population, Sample, Statistics, Parameters).</li>
+<li>Explored the four levels of measurement (Nominal, Ordinal, Interval, Ratio) with R examples using <code>factor()</code>.</li>
+<li>Studied measures of location (mean, mode, median) and measures of dispersion (range, IQR, variance, standard deviation), including the distinction between Population Variance (σ², divided by N) and Sample Variance (S², divided by n−1, Bessel's Correction).</li>
+<li>Completed Data Activity 1 using the COVID-19 India dataset (January–March 2020).</li>
+</ul>
+<h3>Artefacts</h3>
+<p>
+<strong>COVID-19 India Dataset Exploration (Data Activity 1)</strong>
+</p>
+<p>
                     Loaded and explored a real-world COVID-19 dataset (India, January–March 2020)
                     using R in Google Colab. Key R functions applied included <code>read.csv()</code>,
                     <code>ncol()</code>, <code>nrow()</code>, <code>names()</code>, <code>str()</code>,
                     <code>unique()</code>, <code>length()</code>, <code>as.Date()</code>,
                     <code>range()</code>, <code>table()</code>, and <code>sort()</code>.
                 </p>
-
-                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
-                    <img src="images/Unit1_DataLoading.png" alt="Loading COVID-19 Dataset in R" />
-                </span>
-
-                <p>Key findings:</p>
-                <ul>
-                    <li>Dataset structure: 7 variables, 270 observations.</li>
-                    <li>27 unique states/union territories represented.</li>
-                    <li>Date range: 30 January 2020 – 21 March 2020.</li>
-                    <li>Kerala was the most frequently recorded state (52 entries).</li>
-                </ul>
-
-                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
-                    <img src="images/Unit1_Task1.1.png" alt="Task 1.1 Code and Output" />
-                </span>
-
-                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
-                    <img src="images/Unit1_Task1.2.png" alt="Task 1.2 Code and Output" />
-                </span>
-
-                <h3>Reflection</h3>
-
-                <p>
+<span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+<img alt="Loading COVID-19 Dataset in R" src="images/Unit1_DataLoading.png"/>
+</span>
+<p>Key findings:</p>
+<ul>
+<li>Dataset structure: 7 variables, 270 observations.</li>
+<li>27 unique states/union territories represented.</li>
+<li>Date range: 30 January 2020 – 21 March 2020.</li>
+<li>Kerala was the most frequently recorded state (52 entries).</li>
+</ul>
+<span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+<img alt="Task 1.1 Code and Output" src="images/Unit1_Task1.1.png"/>
+</span>
+<span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+<img alt="Task 1.2 Code and Output" src="images/Unit1_Task1.2.png"/>
+</span>
+<h3>Reflection</h3>
+<p>
                     This unit built my foundational understanding of statistics and R programming.
                     I learned to distinguish between descriptive and inferential statistics through
                     the "Population–Sample–Statistics–Parameters" framework, and understood why
@@ -117,64 +119,54 @@
                     checking data types and structure to identifying patterns such as the most
                     frequently recorded state.
                 </p>
-
-                <hr />
-
-                <h2>Unit 2 – Data Structures in R</h2>
-
-                <h3>Learning Outcomes</h3>
-                <ul>
-                    <li>Understand different types of Data Structures in R.</li>
-                    <li>Start to perform basic algorithms using R.</li>
-                    <li>Explain data frames and various operations on data frames in R.</li>
-                </ul>
-
-                <h3>Learning Activities</h3>
-                <ul>
-                    <li>Studied the six core data structures in R: Vectors, Matrices, Lists, Data Frames, Factors, and Arrays.</li>
-                    <li>Practised basic arithmetic operators in R (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%/%</code>, <code>^</code>, <code>%%</code>) using <code>paste()</code> to display results.</li>
-                    <li>Explored subsetting and sampling vectors, and building matrices using <code>matrix()</code>.</li>
-                    <li>Studied how Lists combine different data types, and how Data Frames (a special case of a list) are the most common structure for statistical analysis.</li>
-                    <li>Practised applying column-wise functions using <code>apply()</code>, <code>lapply()</code>, and <code>sapply()</code>.</li>
-                    <li>Studied Factors as the R implementation of categorical (Nominal/Ordinal) data, and Arrays as a multi-dimensional extension of matrices.</li>
-                    <li>Reviewed the official Unit 2 reading on Descriptive Statistics, covering percentiles, deciles, quartiles, and box plots.</li>
-                    <li>Completed Data Activity 2, performing frequency analysis on the COVID-19 India dataset.</li>
-                </ul>
-
-                <h3>Artefacts</h3>
-
-                <p>
-                    <strong>COVID-19 Recovery Frequency Analysis (Data Activity 2)</strong>
-                </p>
-
-                <p>
+      </div>
+    </details>
+    <details class="unit card" id="unit-2-data-structures-in-r">
+      <summary><span class="badge">Unit 2</span><span class="unit-title">Data Structures in R</span><span class="unit-tags"><span class="tag">Learning Outcomes</span><span class="tag">Learning Activities</span><span class="tag">Artefacts</span><span class="tag">Reflection</span></span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="unit-body prose">
+<h3>Learning Outcomes</h3>
+<ul>
+<li>Understand different types of Data Structures in R.</li>
+<li>Start to perform basic algorithms using R.</li>
+<li>Explain data frames and various operations on data frames in R.</li>
+</ul>
+<h3>Learning Activities</h3>
+<ul>
+<li>Studied the six core data structures in R: Vectors, Matrices, Lists, Data Frames, Factors, and Arrays.</li>
+<li>Practised basic arithmetic operators in R (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%/%</code>, <code>^</code>, <code>%%</code>) using <code>paste()</code> to display results.</li>
+<li>Explored subsetting and sampling vectors, and building matrices using <code>matrix()</code>.</li>
+<li>Studied how Lists combine different data types, and how Data Frames (a special case of a list) are the most common structure for statistical analysis.</li>
+<li>Practised applying column-wise functions using <code>apply()</code>, <code>lapply()</code>, and <code>sapply()</code>.</li>
+<li>Studied Factors as the R implementation of categorical (Nominal/Ordinal) data, and Arrays as a multi-dimensional extension of matrices.</li>
+<li>Reviewed the official Unit 2 reading on Descriptive Statistics, covering percentiles, deciles, quartiles, and box plots.</li>
+<li>Completed Data Activity 2, performing frequency analysis on the COVID-19 India dataset.</li>
+</ul>
+<h3>Artefacts</h3>
+<p>
+<strong>COVID-19 Recovery Frequency Analysis (Data Activity 2)</strong>
+</p>
+<p>
                     Performed a frequency analysis on the COVID-19 India dataset to examine patterns
                     in recovery reporting between January and March 2020. Key R functions applied
                     included <code>ifelse()</code>, <code>table()</code>, and <code>prop.table()</code>.
                 </p>
-
-                <p>Key findings:</p>
-                <ul>
-                    <li>Frequency table: 215 daily reports showed no recoveries, 55 showed recoveries reported.</li>
-                    <li>Percentages: approximately 79.6% of daily reports had no recovery cases, while 20.4% included recovery cases.</li>
-                    <li>Created a new binary variable <code>has_recovery</code> (1 = recovery reported, 0 = no recovery), added directly to the dataset.</li>
-                </ul>
-
-                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
-                    <img src="images/Unit2_Task1.png" alt="Task 1 - Frequency Table" />
-                </span>
-
-                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
-                    <img src="images/Unit2_Task2.png" alt="Task 2 - Percentages" />
-                </span>
-
-                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
-                    <img src="images/Unit2_Task3.png" alt="Task 3 - has_recovery Binary Variable" />
-                </span>
-
-                <h3>Reflection</h3>
-
-                <p>
+<p>Key findings:</p>
+<ul>
+<li>Frequency table: 215 daily reports showed no recoveries, 55 showed recoveries reported.</li>
+<li>Percentages: approximately 79.6% of daily reports had no recovery cases, while 20.4% included recovery cases.</li>
+<li>Created a new binary variable <code>has_recovery</code> (1 = recovery reported, 0 = no recovery), added directly to the dataset.</li>
+</ul>
+<span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+<img alt="Task 1 - Frequency Table" src="images/Unit2_Task1.png"/>
+</span>
+<span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+<img alt="Task 2 - Percentages" src="images/Unit2_Task2.png"/>
+</span>
+<span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+<img alt="Task 3 - has_recovery Binary Variable" src="images/Unit2_Task3.png"/>
+</span>
+<h3>Reflection</h3>
+<p>
                     This unit strengthened my understanding of R's data structures, particularly how
                     data frames organise real-world datasets like the COVID-19 India data used in
                     Unit 1. Applying frequency analysis in Data Activity 2 helped me understand how
@@ -182,62 +174,52 @@
                     reporting — specifically, that the vast majority of daily reports in this early
                     period showed no recoveries, reflecting how new the outbreak was at the time.
                 </p>
-
-                <hr />
-
-                <h2>Unit 3 – Data Management in R</h2>
-
-                <h3>Learning Outcomes</h3>
-                <ul>
-                    <li>Understand how to examine dataset and variables using R (and Python).</li>
-                    <li>Start to convert different variable types.</li>
-                    <li>Understand how to manage missing values.</li>
-                </ul>
-
-                <h3>Learning Activities</h3>
-                <ul>
-                    <li>Studied the different file types R can read (CSV, TXT, TAB, Excel, STATA, SPSS, SAS, .Rdata) and two methods for importing data (code-based and RStudio GUI).</li>
-                    <li>Practised examining whole datasets (<code>View()</code>, <code>names()</code>) and specific variables (<code>str()</code>, <code>class()</code>, <code>head()</code>, <code>summary()</code>).</li>
-                    <li>Studied approaches to handling missing values: Pairwise Deletion vs. Listwise Deletion, and the <code>na.rm</code> argument in R.</li>
-                    <li>Practised converting variable types (<code>as.factor()</code>, <code>as.character()</code>, <code>as.integer()</code>, <code>as.numeric()</code>), including the important two-step conversion required when converting a Factor to Numeric (via Character first).</li>
-                    <li>Reviewed how R saves data using the <code>write()</code> function.</li>
-                    <li>Completed Data Activity 3, creating and analysing new categorical variables on the COVID-19 India dataset.</li>
-                </ul>
-
-                <h3>Artefacts</h3>
-
-                <p>
-                    <strong>COVID-19 Death Reporting and Case Level Analysis (Data Activity 3)</strong>
-                </p>
-
-                <p>
+      </div>
+    </details>
+    <details class="unit card" id="unit-3-data-management-in-r">
+      <summary><span class="badge">Unit 3</span><span class="unit-title">Data Management in R</span><span class="unit-tags"><span class="tag">Learning Outcomes</span><span class="tag">Learning Activities</span><span class="tag">Artefacts</span><span class="tag">Reflection</span></span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="unit-body prose">
+<h3>Learning Outcomes</h3>
+<ul>
+<li>Understand how to examine dataset and variables using R (and Python).</li>
+<li>Start to convert different variable types.</li>
+<li>Understand how to manage missing values.</li>
+</ul>
+<h3>Learning Activities</h3>
+<ul>
+<li>Studied the different file types R can read (CSV, TXT, TAB, Excel, STATA, SPSS, SAS, .Rdata) and two methods for importing data (code-based and RStudio GUI).</li>
+<li>Practised examining whole datasets (<code>View()</code>, <code>names()</code>) and specific variables (<code>str()</code>, <code>class()</code>, <code>head()</code>, <code>summary()</code>).</li>
+<li>Studied approaches to handling missing values: Pairwise Deletion vs. Listwise Deletion, and the <code>na.rm</code> argument in R.</li>
+<li>Practised converting variable types (<code>as.factor()</code>, <code>as.character()</code>, <code>as.integer()</code>, <code>as.numeric()</code>), including the important two-step conversion required when converting a Factor to Numeric (via Character first).</li>
+<li>Reviewed how R saves data using the <code>write()</code> function.</li>
+<li>Completed Data Activity 3, creating and analysing new categorical variables on the COVID-19 India dataset.</li>
+</ul>
+<h3>Artefacts</h3>
+<p>
+<strong>COVID-19 Death Reporting and Case Level Analysis (Data Activity 3)</strong>
+</p>
+<p>
                     Created and analysed new derived variables on the COVID-19 India dataset. Key R
                     functions applied included <code>ifelse()</code>, <code>table()</code>,
                     <code>factor()</code>, <code>cut()</code>, and <code>sort()</code>.
                 </p>
-
-                <p>Key findings:</p>
-                <ul>
-                    <li>Created a binary variable <code>has_deaths</code>, converted to a labelled factor ("No Deaths" / "Deaths Reported"): 245 daily reports showed no deaths, 25 showed deaths reported.</li>
-                    <li>Created a categorical variable <code>case_level</code> (No Cases / Low Cases / Medium Cases / High Cases) based on total confirmed cases (Indian + Foreign nationals).</li>
-                    <li>Built a frequency table for State/Union Territory and identified the top 10 states with the highest number of daily reports, with Kerala remaining the most frequently recorded state.</li>
-                </ul>
-
-                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
-                    <img src="images/Unit3_Task1-3.png" alt="Task 1-3 - has_deaths Binary and Factor" />
-                </span>
-
-                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
-                    <img src="images/Unit3_Task4.png" alt="Task 4 - case_level Categorical Variable" />
-                </span>
-
-                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
-                    <img src="images/Unit3_Task5-6.png" alt="Task 5-6 - State Frequency and Top 10 States" />
-                </span>
-
-                <h3>Reflection</h3>
-
-                <p>
+<p>Key findings:</p>
+<ul>
+<li>Created a binary variable <code>has_deaths</code>, converted to a labelled factor ("No Deaths" / "Deaths Reported"): 245 daily reports showed no deaths, 25 showed deaths reported.</li>
+<li>Created a categorical variable <code>case_level</code> (No Cases / Low Cases / Medium Cases / High Cases) based on total confirmed cases (Indian + Foreign nationals).</li>
+<li>Built a frequency table for State/Union Territory and identified the top 10 states with the highest number of daily reports, with Kerala remaining the most frequently recorded state.</li>
+</ul>
+<span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+<img alt="Task 1-3 - has_deaths Binary and Factor" src="images/Unit3_Task1-3.png"/>
+</span>
+<span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+<img alt="Task 4 - case_level Categorical Variable" src="images/Unit3_Task4.png"/>
+</span>
+<span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+<img alt="Task 5-6 - State Frequency and Top 10 States" src="images/Unit3_Task5-6.png"/>
+</span>
+<h3>Reflection</h3>
+<p>
                     This unit deepened my understanding of practical data management in R,
                     particularly the workflow of examining, converting, and deriving new variables
                     from raw data. Creating the <code>has_deaths</code> and <code>case_level</code>
@@ -247,59 +229,52 @@
                     built directly on the frequency analysis skills from Unit 2, applying them to a
                     new dimension of the COVID-19 dataset.
                 </p>
-
-                <hr />
-
-                <h2>Unit 4 – Probability and Sampling Methods</h2>
-
-                <h3>Learning Outcomes</h3>
-                <ul>
-                    <li>Understand and apply the fundamental rules of probability, including conditional probability.</li>
-                    <li>Identify and apply discrete probability distributions (Binomial, Poisson, Hypergeometric) in R.</li>
-                    <li>Identify and apply continuous probability distributions (Normal, Uniform, Exponential) in R.</li>
-                    <li>Distinguish between biased and unbiased sampling methods.</li>
-                </ul>
-
-                <h3>Learning Activities</h3>
-                <ul>
-                    <li>Studied the fundamentals of probability, including conditional probability.</li>
-                    <li>Studied discrete probability distributions — Binomial, Poisson, and Hypergeometric — and their corresponding R functions.</li>
-                    <li>Studied continuous probability distributions — Normal, Uniform, and Exponential — and their corresponding R functions.</li>
-                    <li>Studied sampling methods: biased approaches (convenience sampling, voluntary response sampling) and unbiased approaches (simple random, stratified random, multi-stage sampling).</li>
-                    <li>Attended Seminar 3 with Dr. Adrian Euler, covering probability distributions, quantiles, the Central Limit Theorem, and Type I/II errors, with an accompanying R script.</li>
-                </ul>
-
-                <h3>Artefacts</h3>
-
-                <p>
-                    <em>[No formative activity completed for this unit.]</em>
-                </p>
-
-                <hr />
-
-                <h2>Unit 5 – Producing Plots and Introduction to Calculus in R</h2>
-
-                <h3>Learning Outcomes</h3>
-                <ul>
-                    <li>Produce and interpret a range of plot types in R (bar, histogram, pie, scatter, boxplot, line).</li>
-                    <li>Understand the basic principles of differentiation and integration and their application in R.</li>
-                </ul>
-
-                <h3>Learning Activities</h3>
-                <ul>
-                    <li>Studied how to produce plots in R, including bar charts, histograms, pie charts, scatter plots, boxplots, and line graphs.</li>
-                    <li>Studied an introduction to calculus in R, covering basic differentiation and integration.</li>
-                    <li>Completed the initial post for Collaborative Discussion 1 (Units 5-7): redesigned Table II from Brown (1994) — reporting 550 GPs' responses to 24 statements on intrapartum care — as a set of stacked bar charts produced in R using <code>barplot()</code>.</li>
-                    <li>Completed Data Activity 4 using the COVID-19 India dataset, producing a bar chart, pie chart, histogram, and line chart in R.</li>
-                </ul>
-
-                <h3>Artefacts</h3>
-
-                <p>
-                    <strong>1. Redesigning Brown (1994) Table II as Stacked Bar Charts (Collaborative Discussion 1 — Initial Post)</strong>
-                </p>
-
-                <p>
+      </div>
+    </details>
+    <details class="unit card" id="unit-4-probability-and-sampling-methods">
+      <summary><span class="badge">Unit 4</span><span class="unit-title">Probability and Sampling Methods</span><span class="unit-tags"><span class="tag">Learning Outcomes</span><span class="tag">Learning Activities</span><span class="tag">Artefacts</span></span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="unit-body prose">
+<h3>Learning Outcomes</h3>
+<ul>
+<li>Understand and apply the fundamental rules of probability, including conditional probability.</li>
+<li>Identify and apply discrete probability distributions (Binomial, Poisson, Hypergeometric) in R.</li>
+<li>Identify and apply continuous probability distributions (Normal, Uniform, Exponential) in R.</li>
+<li>Distinguish between biased and unbiased sampling methods.</li>
+</ul>
+<h3>Learning Activities</h3>
+<ul>
+<li>Studied the fundamentals of probability, including conditional probability.</li>
+<li>Studied discrete probability distributions — Binomial, Poisson, and Hypergeometric — and their corresponding R functions.</li>
+<li>Studied continuous probability distributions — Normal, Uniform, and Exponential — and their corresponding R functions.</li>
+<li>Studied sampling methods: biased approaches (convenience sampling, voluntary response sampling) and unbiased approaches (simple random, stratified random, multi-stage sampling).</li>
+<li>Attended Seminar 3 with Dr. Adrian Euler, covering probability distributions, quantiles, the Central Limit Theorem, and Type I/II errors, with an accompanying R script.</li>
+</ul>
+<h3>Artefacts</h3>
+<p>
+<em>[No formative activity completed for this unit.]</em>
+</p>
+      </div>
+    </details>
+    <details class="unit card" id="unit-5-producing-plots-and-introduction-to-calculus-in-r">
+      <summary><span class="badge">Unit 5</span><span class="unit-title">Producing Plots and Introduction to Calculus in R</span><span class="unit-tags"><span class="tag">Learning Outcomes</span><span class="tag">Learning Activities</span><span class="tag">Artefacts</span><span class="tag">Reflection</span></span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="unit-body prose">
+<h3>Learning Outcomes</h3>
+<ul>
+<li>Produce and interpret a range of plot types in R (bar, histogram, pie, scatter, boxplot, line).</li>
+<li>Understand the basic principles of differentiation and integration and their application in R.</li>
+</ul>
+<h3>Learning Activities</h3>
+<ul>
+<li>Studied how to produce plots in R, including bar charts, histograms, pie charts, scatter plots, boxplots, and line graphs.</li>
+<li>Studied an introduction to calculus in R, covering basic differentiation and integration.</li>
+<li>Completed the initial post for Collaborative Discussion 1 (Units 5-7): redesigned Table II from Brown (1994) — reporting 550 GPs' responses to 24 statements on intrapartum care — as a set of stacked bar charts produced in R using <code>barplot()</code>.</li>
+<li>Completed Data Activity 4 using the COVID-19 India dataset, producing a bar chart, pie chart, histogram, and line chart in R.</li>
+</ul>
+<h3>Artefacts</h3>
+<p>
+<strong>1. Redesigning Brown (1994) Table II as Stacked Bar Charts (Collaborative Discussion 1 — Initial Post)</strong>
+</p>
+<p>
                     Table II in Brown's (1994) study reports how 550 general practitioners (GPs)
                     responded to 24 statements about intrapartum care, each split into Agree, No
                     opinion, and Disagree — 72 individual figures in one table. To make this more
@@ -310,32 +285,26 @@
                     stacked bar chart in R using <code>barplot()</code>, plotting the three response
                     categories against each statement.
                 </p>
-
-                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
-                    <img src="images/Barriers_to_Providing_Intrapartum_Care.png" alt="Figure 1 - Barriers to Providing Intrapartum Care (n=550 GPs)" />
-                </span>
-                <p><em>Figure 1. Barriers to Providing Intrapartum Care (n=550 GPs)</em></p>
-
-                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
-                    <img src="images/Views_on_Patient_Choice_and_Place_of_Birth.png" alt="Figure 2 - Views on Patient Choice and Place of Birth (n=550 GPs)" />
-                </span>
-                <p><em>Figure 2. Views on Patient Choice and Place of Birth (n=550 GPs)</em></p>
-
-                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
-                    <img src="images/Views_on_Training__Roles__and_Remuneration.png" alt="Figure 3 - Views on Training, Professional Roles, and Remuneration (n=550 GPs)" />
-                </span>
-                <p><em>Figure 3. Views on Training, Professional Roles, and Remuneration (n=550 GPs)</em></p>
-
-                <p>Key findings:</p>
-                <ul>
-                    <li>Figure 1 shows workload (83%), disruption to personal life (75%), and fear of litigation (69%) as the most widely agreed-upon reasons GPs avoid offering more intrapartum care.</li>
-                    <li>Figure 2 exposes a contradiction: 71% agreed a woman should not be removed from a GP's list for wanting a home birth, yet 74% disagreed that GPs should be personally obliged to arrange one.</li>
-                    <li>Figure 3 shows a similar pattern: 92% agreed that GPs wanting to provide full intrapartum care should be enabled to, but only 23% personally wanted to offer more themselves.</li>
-                </ul>
-
-                <h3>Reflection</h3>
-
-                <p>
+<span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+<img alt="Figure 1 - Barriers to Providing Intrapartum Care (n=550 GPs)" src="images/Barriers_to_Providing_Intrapartum_Care.png"/>
+</span>
+<p><em>Figure 1. Barriers to Providing Intrapartum Care (n=550 GPs)</em></p>
+<span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+<img alt="Figure 2 - Views on Patient Choice and Place of Birth (n=550 GPs)" src="images/Views_on_Patient_Choice_and_Place_of_Birth.png"/>
+</span>
+<p><em>Figure 2. Views on Patient Choice and Place of Birth (n=550 GPs)</em></p>
+<span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+<img alt="Figure 3 - Views on Training, Professional Roles, and Remuneration (n=550 GPs)" src="images/Views_on_Training__Roles__and_Remuneration.png"/>
+</span>
+<p><em>Figure 3. Views on Training, Professional Roles, and Remuneration (n=550 GPs)</em></p>
+<p>Key findings:</p>
+<ul>
+<li>Figure 1 shows workload (83%), disruption to personal life (75%), and fear of litigation (69%) as the most widely agreed-upon reasons GPs avoid offering more intrapartum care.</li>
+<li>Figure 2 exposes a contradiction: 71% agreed a woman should not be removed from a GP's list for wanting a home birth, yet 74% disagreed that GPs should be personally obliged to arrange one.</li>
+<li>Figure 3 shows a similar pattern: 92% agreed that GPs wanting to provide full intrapartum care should be enabled to, but only 23% personally wanted to offer more themselves.</li>
+</ul>
+<h3>Reflection</h3>
+<p>
                     This task changed how I think about simplifying data. Reducing a large table does
                     not have to mean losing detail — grouping by a clear, consistent theme preserved
                     the detail while making it far more accessible, directly resolving the concern
@@ -344,12 +313,10 @@
                     data: since the responses were categorical, a bar chart suited them better than a
                     scatter plot or histogram would have.
                 </p>
-
-                <p>
-                    <strong>2. Plotting the COVID-19 India Dataset (Data Activity 4)</strong>
-                </p>
-
-                <p>
+<p>
+<strong>2. Plotting the COVID-19 India Dataset (Data Activity 4)</strong>
+</p>
+<p>
                     Produced four plot types in R on the COVID-19 India dataset (n = 270): a bar chart
                     of report frequency by state/union territory, a pie chart of case severity levels
                     (derived from <code>ConfirmedIndianNational</code> and
@@ -359,22 +326,18 @@
                     <code>pie()</code>, <code>cut()</code>, <code>hist()</code>,
                     <code>aggregate()</code>, and <code>plot()</code>.
                 </p>
-
-                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
-                    <img src="images/activity4.png" alt="Data Activity 4 - Bar Chart, Pie Chart, Histogram, and Line Chart" />
-                </span>
-
-                <p>Key findings:</p>
-                <ul>
-                    <li>Kerala was the most frequently recorded state (52 reports), followed by Telengana and Delhi (20 each), Rajasthan (19), and Uttar Pradesh and Haryana (18 each).</li>
-                    <li>Case severity was concentrated at the low end: 65.6% of reports fell into the Low Cases (1-5) band, 27.8% into Medium (6-20), and 6.7% into High (21+).</li>
-                    <li>Recovery numbers were heavily right-skewed: 215 of 270 reports (79.6%) recorded zero cured cases, consistent with the <code>has_recovery</code> finding from Data Activity 2.</li>
-                    <li>The cumulative confirmed-cases trend was flat through February, then rose sharply from early March, reaching 283 total confirmed cases by 21 March 2020.</li>
-                </ul>
-
-                <h3>Reflection</h3>
-
-                <p>
+<span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+<img alt="Data Activity 4 - Bar Chart, Pie Chart, Histogram, and Line Chart" src="images/activity4.png"/>
+</span>
+<p>Key findings:</p>
+<ul>
+<li>Kerala was the most frequently recorded state (52 reports), followed by Telengana and Delhi (20 each), Rajasthan (19), and Uttar Pradesh and Haryana (18 each).</li>
+<li>Case severity was concentrated at the low end: 65.6% of reports fell into the Low Cases (1-5) band, 27.8% into Medium (6-20), and 6.7% into High (21+).</li>
+<li>Recovery numbers were heavily right-skewed: 215 of 270 reports (79.6%) recorded zero cured cases, consistent with the <code>has_recovery</code> finding from Data Activity 2.</li>
+<li>The cumulative confirmed-cases trend was flat through February, then rose sharply from early March, reaching 283 total confirmed cases by 21 March 2020.</li>
+</ul>
+<h3>Reflection</h3>
+<p>
                     This activity highlighted how the same dataset can tell different stories depending
                     on which plot type is used. The bar chart and pie chart both worked with the
                     cross-sectional structure of the data (frequencies at a point in time), while the
@@ -394,63 +357,56 @@
                     because the dataset changed its naming during the period; these were kept as
                     recorded rather than merged.
                 </p>
-
-                <hr />
-
-                <h2>Unit 6 – Statistical Inference, Confidence Intervals, and Hypothesis Testing</h2>
-
-                <h3>Learning Outcomes</h3>
-                <ul>
-                    <li>Use confidence intervals for the statistical interpretation of data.</li>
-                    <li>Perform statistical analysis using a null or alternative hypothesis.</li>
-                    <li>Take a decision based on p-value and statistical significance.</li>
-                </ul>
-
-                <h3>Learning Activities</h3>
-                <ul>
-                    <li>Re-introduced inferential statistics and the Normal distribution, building on Unit 1.</li>
-                    <li>Studied confidence intervals and test statistics.</li>
-                    <li>Studied the null and alternative hypotheses, and the significance level and p-value.</li>
-                    <li>Completed two Peer Responses (max 300 words each) to the Collaborative Discussion 1 initial post from Unit 5.</li>
-                    <li>Attempted the Statistics Quiz.</li>
-                </ul>
-
-                <h3>Artefacts</h3>
-
-                <p>
-                    <em>[No submittable artefact for this unit — the Peer Responses and Statistics Quiz are not recorded as separate portfolio artefacts.]</em>
-                </p>
-
-                <hr />
-
-                <h2>Unit 7 – Parametric Tests</h2>
-
-                <h3>Learning Outcomes</h3>
-                <ul>
-                    <li>Apply parametric hypothesis tests, including the one-sample t-test, two-sample independent t-test, and paired t-test.</li>
-                    <li>Apply one-way ANOVA to compare means across more than two groups.</li>
-                    <li>Test for normality using the Shapiro-Wilk test.</li>
-                    <li>Apply the statistical knowledge developed across Units 1-7 in a timed, single-sitting assessment.</li>
-                </ul>
-
-                <h3>Learning Activities</h3>
-                <ul>
-                    <li>Studied the one-sample t-test, two-sample independent t-test, and paired t-test.</li>
-                    <li>Studied one-way ANOVA for comparing means across multiple groups.</li>
-                    <li>Studied the Shapiro-Wilk test for assessing normality.</li>
-                    <li>Worked through all eight topics in Dr. Adrian Euler's "Preparation for the Test" document, including the solved examples and practice problems A–H.</li>
-                    <li>Completed the 300-word Summary Post for Collaborative Discussion 1, responding to peer feedback on the initial post.</li>
-                    <li>Sat the Mathematical Test (25% of the module grade): a one-hour, single-sitting exam covering theory and calculation, completed by hand with a calculator and no R code.</li>
-                    <li>Completed Data Activity 5 using the Health_Data dataset in R (via Google Colab), covering descriptive statistics, a five-number summary with boxplot, and an independent two-sample t-test.</li>
-                </ul>
-
-                <h3>Artefacts</h3>
-
-                <p>
-                    <strong>Health_Data Descriptive and Inferential Analysis (Data Activity 5)</strong>
-                </p>
-
-                <p>
+      </div>
+    </details>
+    <details class="unit card" id="unit-6-statistical-inference-confidence-intervals-and-hypoth">
+      <summary><span class="badge">Unit 6</span><span class="unit-title">Statistical Inference, Confidence Intervals, and Hypothesis Testing</span><span class="unit-tags"><span class="tag">Learning Outcomes</span><span class="tag">Learning Activities</span><span class="tag">Artefacts</span></span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="unit-body prose">
+<h3>Learning Outcomes</h3>
+<ul>
+<li>Use confidence intervals for the statistical interpretation of data.</li>
+<li>Perform statistical analysis using a null or alternative hypothesis.</li>
+<li>Take a decision based on p-value and statistical significance.</li>
+</ul>
+<h3>Learning Activities</h3>
+<ul>
+<li>Re-introduced inferential statistics and the Normal distribution, building on Unit 1.</li>
+<li>Studied confidence intervals and test statistics.</li>
+<li>Studied the null and alternative hypotheses, and the significance level and p-value.</li>
+<li>Completed two Peer Responses (max 300 words each) to the Collaborative Discussion 1 initial post from Unit 5.</li>
+<li>Attempted the Statistics Quiz.</li>
+</ul>
+<h3>Artefacts</h3>
+<p>
+<em>[No submittable artefact for this unit — the Peer Responses and Statistics Quiz are not recorded as separate portfolio artefacts.]</em>
+</p>
+      </div>
+    </details>
+    <details class="unit card" id="unit-7-parametric-tests">
+      <summary><span class="badge">Unit 7</span><span class="unit-title">Parametric Tests</span><span class="unit-tags"><span class="tag">Learning Outcomes</span><span class="tag">Learning Activities</span><span class="tag">Artefacts</span><span class="tag">Reflection</span></span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="unit-body prose">
+<h3>Learning Outcomes</h3>
+<ul>
+<li>Apply parametric hypothesis tests, including the one-sample t-test, two-sample independent t-test, and paired t-test.</li>
+<li>Apply one-way ANOVA to compare means across more than two groups.</li>
+<li>Test for normality using the Shapiro-Wilk test.</li>
+<li>Apply the statistical knowledge developed across Units 1-7 in a timed, single-sitting assessment.</li>
+</ul>
+<h3>Learning Activities</h3>
+<ul>
+<li>Studied the one-sample t-test, two-sample independent t-test, and paired t-test.</li>
+<li>Studied one-way ANOVA for comparing means across multiple groups.</li>
+<li>Studied the Shapiro-Wilk test for assessing normality.</li>
+<li>Worked through all eight topics in Dr. Adrian Euler's "Preparation for the Test" document, including the solved examples and practice problems A–H.</li>
+<li>Completed the 300-word Summary Post for Collaborative Discussion 1, responding to peer feedback on the initial post.</li>
+<li>Sat the Mathematical Test (25% of the module grade): a one-hour, single-sitting exam covering theory and calculation, completed by hand with a calculator and no R code.</li>
+<li>Completed Data Activity 5 using the Health_Data dataset in R (via Google Colab), covering descriptive statistics, a five-number summary with boxplot, and an independent two-sample t-test.</li>
+</ul>
+<h3>Artefacts</h3>
+<p>
+<strong>Health_Data Descriptive and Inferential Analysis (Data Activity 5)</strong>
+</p>
+<p>
                     Analysed the Health_Data dataset (n = 210) in R using the <code>haven</code> package
                     to import the SPSS (.sav) file. Calculated mean, median, and mode for the variables
                     <code>sbp</code>, <code>dbp</code>, and <code>income</code> (using a custom
@@ -460,23 +416,19 @@
                     and the presence or absence of peptic ulcer, after checking normality
                     (<code>shapiro.test()</code>) and equality of variances (<code>var.test()</code>).
                 </p>
-
-                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
-                    <img src="images/activity5.png" alt="Data Activity 5 - Health_Data R Output" />
-                </span>
-
-                <p>Key findings:</p>
-                <ul>
-                    <li>sbp: Mean = 127.73, Median = 123, Mode = 120.</li>
-                    <li>dbp: Mean = 82.77, Median = 82, Mode = multimodal (74, 80, and 82 each occurring 13 times).</li>
-                    <li>income: Mean = 85,194.49, Median = 86,560.5; no meaningful mode, as values were essentially unique.</li>
-                    <li>Income five-number summary: Min = 52,933, Q1 = 68,636.5, Median = 86,560.5, Q3 = 99,696.25, Max = 117,210; no outliers were identified using the 1.5×IQR rule.</li>
-                    <li>Independent two-sample t-test (sbp by peptic ulcer status): t = 1.277, df = 208, p = 0.203 — no statistically significant association between sbp and the presence of peptic ulcer in this sample.</li>
-                </ul>
-
-                <h3>Reflection</h3>
-
-                <p>
+<span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+<img alt="Data Activity 5 - Health_Data R Output" src="images/activity5.png"/>
+</span>
+<p>Key findings:</p>
+<ul>
+<li>sbp: Mean = 127.73, Median = 123, Mode = 120.</li>
+<li>dbp: Mean = 82.77, Median = 82, Mode = multimodal (74, 80, and 82 each occurring 13 times).</li>
+<li>income: Mean = 85,194.49, Median = 86,560.5; no meaningful mode, as values were essentially unique.</li>
+<li>Income five-number summary: Min = 52,933, Q1 = 68,636.5, Median = 86,560.5, Q3 = 99,696.25, Max = 117,210; no outliers were identified using the 1.5×IQR rule.</li>
+<li>Independent two-sample t-test (sbp by peptic ulcer status): t = 1.277, df = 208, p = 0.203 — no statistically significant association between sbp and the presence of peptic ulcer in this sample.</li>
+</ul>
+<h3>Reflection</h3>
+<p>
                     This unit connected the theory of hypothesis testing directly to a practical
                     dataset. Working through Data Activity 5 required identifying that sbp is a
                     continuous variable and peptic ulcer status is a two-level categorical variable,
@@ -492,33 +444,29 @@
                     assumptions perfectly, though the large sample size still supported using a
                     parametric test in practice.
                 </p>
-
-                <hr />
-
-                <h2>Unit 8 – Nonparametric Tests</h2>
-
-                <h3>Learning Outcomes</h3>
-                <ul>
-                    <li>Demonstrate application of nonparametric tests after assessing the normality test.</li>
-                    <li>Understand and perform nonparametric tests using R functions.</li>
-                    <li>Explain the results of nonparametric tests.</li>
-                </ul>
-
-                <h3>Learning Activities</h3>
-                <ul>
-                    <li>Studied the rationale for nonparametric tests: used when the quantitative dependent variable is not normally distributed, or when data are measured on nominal/ordinal scales.</li>
-                    <li>Studied the nonparametric-parametric equivalence table: Mann-Whitney U (↔ independent-samples t-test), Wilcoxon Signed Ranks (↔ paired t-test), Kruskal-Wallis (↔ one-way ANOVA), and Spearman's correlation (↔ Pearson's correlation).</li>
-                    <li>Completed Data Activity 6 using the Health_Data dataset, covering three tasks: calculating the mean, median, and mode of the <code>age</code> variable; testing whether median diastolic blood pressure (dbp) differs between diabetic and non-diabetic participants using the Mann-Whitney U test, after confirming non-normality in one group via Shapiro-Wilk; and testing whether systolic blood pressure (sbp) differs across four occupational groups (Govt Job, Private Job, Business, Others) using the Kruskal-Wallis test.</li>
-                    <li>Completed a Scenario-Based Exercise comparing the training efficiency of three vendors, calculating group means, testing normality for each group, and applying one-way ANOVA with a Tukey HSD post-hoc test to identify which vendor(s) differed significantly at the 95% confidence level.</li>
-                </ul>
-
-                <h3>Artefacts</h3>
-
-                <p>
-                    <strong>Health_Data Nonparametric Analysis (Data Activity 6)</strong>
-                </p>
-
-                <p>
+      </div>
+    </details>
+    <details class="unit card" id="unit-8-nonparametric-tests">
+      <summary><span class="badge">Unit 8</span><span class="unit-title">Nonparametric Tests</span><span class="unit-tags"><span class="tag">Learning Outcomes</span><span class="tag">Learning Activities</span><span class="tag">Artefacts</span><span class="tag">Reflection</span></span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="unit-body prose">
+<h3>Learning Outcomes</h3>
+<ul>
+<li>Demonstrate application of nonparametric tests after assessing the normality test.</li>
+<li>Understand and perform nonparametric tests using R functions.</li>
+<li>Explain the results of nonparametric tests.</li>
+</ul>
+<h3>Learning Activities</h3>
+<ul>
+<li>Studied the rationale for nonparametric tests: used when the quantitative dependent variable is not normally distributed, or when data are measured on nominal/ordinal scales.</li>
+<li>Studied the nonparametric-parametric equivalence table: Mann-Whitney U (↔ independent-samples t-test), Wilcoxon Signed Ranks (↔ paired t-test), Kruskal-Wallis (↔ one-way ANOVA), and Spearman's correlation (↔ Pearson's correlation).</li>
+<li>Completed Data Activity 6 using the Health_Data dataset, covering three tasks: calculating the mean, median, and mode of the <code>age</code> variable; testing whether median diastolic blood pressure (dbp) differs between diabetic and non-diabetic participants using the Mann-Whitney U test, after confirming non-normality in one group via Shapiro-Wilk; and testing whether systolic blood pressure (sbp) differs across four occupational groups (Govt Job, Private Job, Business, Others) using the Kruskal-Wallis test.</li>
+<li>Completed a Scenario-Based Exercise comparing the training efficiency of three vendors, calculating group means, testing normality for each group, and applying one-way ANOVA with a Tukey HSD post-hoc test to identify which vendor(s) differed significantly at the 95% confidence level.</li>
+</ul>
+<h3>Artefacts</h3>
+<p>
+<strong>Health_Data Nonparametric Analysis (Data Activity 6)</strong>
+</p>
+<p>
                     Analysed the Health_Data dataset in R, calculating descriptive statistics for
                     <code>age</code>, then applying two nonparametric tests: the Mann-Whitney U test
                     (<code>wilcox.test()</code>) to compare diastolic blood pressure (dbp) between
@@ -527,21 +475,17 @@
                     occupational groups. Test choice in both cases followed from Shapiro-Wilk
                     normality checks (<code>shapiro.test()</code>).
                 </p>
-
-                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
-                    <img src="images/activity6.png" alt="Data Activity 6 - Health_Data Nonparametric R Output" />
-                </span>
-
-                <p>Key findings:</p>
-                <ul>
-                    <li>age: Mean = 26.51, Median = 27, Mode = 26.</li>
-                    <li>Mann-Whitney U test (dbp by diabetes status): W = 3804.5, p = 0.7999 — no statistically significant difference in median dbp between diabetic and non-diabetic participants.</li>
-                    <li>Kruskal-Wallis test (sbp by occupation): chi-squared = 0.779, df = 3, p = 0.8545 — no statistically significant difference in sbp across the four occupational groups.</li>
-                </ul>
-
-                <h3>Reflection</h3>
-
-                <p>
+<span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+<img alt="Data Activity 6 - Health_Data Nonparametric R Output" src="images/activity6.png"/>
+</span>
+<p>Key findings:</p>
+<ul>
+<li>age: Mean = 26.51, Median = 27, Mode = 26.</li>
+<li>Mann-Whitney U test (dbp by diabetes status): W = 3804.5, p = 0.7999 — no statistically significant difference in median dbp between diabetic and non-diabetic participants.</li>
+<li>Kruskal-Wallis test (sbp by occupation): chi-squared = 0.779, df = 3, p = 0.8545 — no statistically significant difference in sbp across the four occupational groups.</li>
+</ul>
+<h3>Reflection</h3>
+<p>
                     This activity extended the parametric testing from Unit 7 to nonparametric
                     alternatives. Both test choices were driven by the Shapiro-Wilk normality
                     results: the diabetic-status comparison used the Mann-Whitney U test after one
@@ -555,12 +499,10 @@
                     was named <code>diabetic</code> with text values "Yes"/"No" caused the code to fail
                     silently.
                 </p>
-
-                <p>
-                    <strong>2. Scenario-Based Exercise — 95% Confidence Interval (Vendor Training Efficiency)</strong>
-                </p>
-
-                <p>
+<p>
+<strong>2. Scenario-Based Exercise — 95% Confidence Interval (Vendor Training Efficiency)</strong>
+</p>
+<p>
                     An HR organisation trained three groups of employees (n = 7 each) using three
                     different vendors, and the task was to compare each vendor's mean training
                     efficiency and determine which vendor showed a significantly higher improvement
@@ -569,22 +511,18 @@
                     normally distributed — a one-way ANOVA was applied, followed by a Tukey HSD
                     post-hoc test to identify exactly which vendor(s) differed significantly.
                 </p>
-
-                <p>Key findings:</p>
-                <ul>
-                    <li>Mean efficiency scores: Vendor 1 = 44.71, Vendor 2 = 51.00, Vendor 3 = 27.71.</li>
-                    <li>Shapiro-Wilk normality test: Vendor 1 (p = 0.4728), Vendor 2 (p = 0.7896), Vendor 3 (p = 0.7426) — all three groups normally distributed, supporting the use of one-way ANOVA.</li>
-                    <li>One-way ANOVA: F = 19.64, df = (2, 18), p = 2.98e-05 — a statistically significant difference exists among the three vendor means.</li>
-                    <li>Tukey HSD post-hoc test: Vendor 3 scored significantly lower than both Vendor 1 (p = 0.0009) and Vendor 2 (p = 0.0000286), while the difference between Vendor 1 and Vendor 2 was not statistically significant (p = 0.257).</li>
-                </ul>
-
-                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
-                    <img src="images/activitych8.png" alt="Scenario-Based Exercise - Vendor Training ANOVA Output" />
-                </span>
-
-                <h3>Reflection</h3>
-
-                <p>
+<p>Key findings:</p>
+<ul>
+<li>Mean efficiency scores: Vendor 1 = 44.71, Vendor 2 = 51.00, Vendor 3 = 27.71.</li>
+<li>Shapiro-Wilk normality test: Vendor 1 (p = 0.4728), Vendor 2 (p = 0.7896), Vendor 3 (p = 0.7426) — all three groups normally distributed, supporting the use of one-way ANOVA.</li>
+<li>One-way ANOVA: F = 19.64, df = (2, 18), p = 2.98e-05 — a statistically significant difference exists among the three vendor means.</li>
+<li>Tukey HSD post-hoc test: Vendor 3 scored significantly lower than both Vendor 1 (p = 0.0009) and Vendor 2 (p = 0.0000286), while the difference between Vendor 1 and Vendor 2 was not statistically significant (p = 0.257).</li>
+</ul>
+<span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+<img alt="Scenario-Based Exercise - Vendor Training ANOVA Output" src="images/activitych8.png"/>
+</span>
+<h3>Reflection</h3>
+<p>
                     This exercise reinforced the importance of checking assumptions before choosing a
                     test rather than defaulting to the nonparametric approach used earlier in this
                     unit: because all three vendor groups passed the Shapiro-Wilk normality test, the
@@ -596,32 +534,29 @@
                     over Vendor 1 was not, in fact, statistically significant given the small sample
                     size per group (n = 7).
                 </p>
-                <hr />
-
-                <h2>Unit 9 – Cross-tabulations and Chi-square Analysis</h2>
-
-                <h3>Learning Outcomes</h3>
-                <ul>
-                    <li>Understand and assess the association between two categorical variables.</li>
-                    <li>Create subsamples and derived categorical variables using R functions.</li>
-                    <li>Perform and interpret chi-square analysis on a contingency table.</li>
-                </ul>
-
-                <h3>Learning Activities</h3>
-                <ul>
-                    <li>Studied cross-tabulation (contingency tables) as a way of presenting counts for combinations of categories, and how the hypothesis is framed as independence between the row and column variables.</li>
-                    <li>Studied the chi-square (χ²) test as a nonparametric test for count data, comparing observed counts with the counts expected under the null hypothesis of independence, with degrees of freedom of (rows − 1) × (columns − 1).</li>
-                    <li>Practised building a contingency table and running <code>chisq.test()</code> on the Superstore dataset (Segment × Category) as a warm-up: χ² = 1.148, df = 4, p = 0.887, so no association was found.</li>
-                    <li>Completed Data Activity 7 using the COVID-19 India dataset, producing two cross-tables: Region × Case Severity Level, and Case Severity Level × Recovery Status.</li>
-                </ul>
-
-                <h3>Artefacts</h3>
-
-                <p>
-                    <strong>COVID-19 India Cross-tabulation and Chi-square Analysis (Data Activity 7)</strong>
-                </p>
-
-                <p>
+      </div>
+    </details>
+    <details class="unit card" id="unit-9-cross-tabulations-and-chi-square-analysis">
+      <summary><span class="badge">Unit 9</span><span class="unit-title">Cross-tabulations and Chi-square Analysis</span><span class="unit-tags"><span class="tag">Learning Outcomes</span><span class="tag">Learning Activities</span><span class="tag">Artefacts</span><span class="tag">Reflection</span></span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="unit-body prose">
+<h3>Learning Outcomes</h3>
+<ul>
+<li>Understand and assess the association between two categorical variables.</li>
+<li>Create subsamples and derived categorical variables using R functions.</li>
+<li>Perform and interpret chi-square analysis on a contingency table.</li>
+</ul>
+<h3>Learning Activities</h3>
+<ul>
+<li>Studied cross-tabulation (contingency tables) as a way of presenting counts for combinations of categories, and how the hypothesis is framed as independence between the row and column variables.</li>
+<li>Studied the chi-square (χ²) test as a nonparametric test for count data, comparing observed counts with the counts expected under the null hypothesis of independence, with degrees of freedom of (rows − 1) × (columns − 1).</li>
+<li>Practised building a contingency table and running <code>chisq.test()</code> on the Superstore dataset (Segment × Category) as a warm-up: χ² = 1.148, df = 4, p = 0.887, so no association was found.</li>
+<li>Completed Data Activity 7 using the COVID-19 India dataset, producing two cross-tables: Region × Case Severity Level, and Case Severity Level × Recovery Status.</li>
+</ul>
+<h3>Artefacts</h3>
+<p>
+<strong>COVID-19 India Cross-tabulation and Chi-square Analysis (Data Activity 7)</strong>
+</p>
+<p>
                     Three categorical variables were derived from the COVID-19 India dataset (n = 270).
                     <code>Region</code> grouped each state or union territory into North, Central,
                     East, West or South, following India's Zonal Councils. <code>CaseSeverity</code>
@@ -635,25 +570,20 @@
                     counts fell below 5, Fisher's exact test (<code>fisher.test()</code>) was added
                     as a check; this test was my own addition beyond the unit material.
                 </p>
-
-                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
-                    <img src="images/activity7_task1.png" alt="Data Activity 7 - Region x Case Severity cross-table and chi-square output" />
-                </span>
-
-                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
-                    <img src="images/activity7_task2.png" alt="Data Activity 7 - Case Severity x Recovery Status chi-square and Fisher's exact test output" />
-                </span>
-
-                <p>Key findings:</p>
-                <ul>
-                    <li>Region × Case Severity: χ² = 70.11, df = 8, p &lt; 0.001; Fisher's exact test (simulated, 10,000 replicates) p &lt; 0.001. The West had the highest share of High-severity reports (46.7%), all East reports were Low (100%), and Central reports were mostly Medium (55.2%).</li>
-                    <li>Case Severity × Recovery Status: χ² = 45.73, df = 2, p &lt; 0.001; Fisher's exact test p &lt; 0.001. The share of reports with recoveries rose with severity: Low 9.0%, Medium 37.3%, High 61.1%.</li>
-                    <li>Five of the 15 expected counts in the first table, and one of the six in the second (High × Recovered = 3.7), were below 5, which triggered R's warning that the chi-square approximation may be incorrect.</li>
-                </ul>
-
-                <h3>Reflection</h3>
-
-                <p>
+<span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+<img alt="Data Activity 7 - Region x Case Severity cross-table and chi-square output" src="images/activity7_task1.png"/>
+</span>
+<span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+<img alt="Data Activity 7 - Case Severity x Recovery Status chi-square and Fisher's exact test output" src="images/activity7_task2.png"/>
+</span>
+<p>Key findings:</p>
+<ul>
+<li>Region × Case Severity: χ² = 70.11, df = 8, p &lt; 0.001; Fisher's exact test (simulated, 10,000 replicates) p &lt; 0.001. The West had the highest share of High-severity reports (46.7%), all East reports were Low (100%), and Central reports were mostly Medium (55.2%).</li>
+<li>Case Severity × Recovery Status: χ² = 45.73, df = 2, p &lt; 0.001; Fisher's exact test p &lt; 0.001. The share of reports with recoveries rose with severity: Low 9.0%, Medium 37.3%, High 61.1%.</li>
+<li>Five of the 15 expected counts in the first table, and one of the six in the second (High × Recovered = 3.7), were below 5, which triggered R's warning that the chi-square approximation may be incorrect.</li>
+</ul>
+<h3>Reflection</h3>
+<p>
                     This activity showed me that a very small p-value is only the start of the
                     interpretation. Both tables showed strong associations, but the second result
                     does not mean that states with more cases recover better. The counts in this
@@ -663,8 +593,7 @@
                     so the reports are not fully independent, which weakens one of the chi-square
                     test's own assumptions.
                 </p>
-
-                <p>
+<p>
                     Two practical lessons stood out. First, R warned that the chi-square
                     approximation may be incorrect, and checking the expected counts explained why.
                     Rather than ignoring the warning, I confirmed the results with Fisher's exact
@@ -675,32 +604,29 @@
                     groups and severity thresholds were also my own decisions, so I have stated them
                     openly rather than presenting them as fixed rules.
                 </p>
-                                <hr />
-
-                <h2>Unit 10 – Correlation and Regression</h2>
-
-                <h3>Learning Outcomes</h3>
-                <ul>
-                    <li>Measure the strength and direction of the relationship between two numerical variables.</li>
-                    <li>Check normality before choosing between Pearson's and Spearman's correlation.</li>
-                    <li>Understand the principles of simple linear regression.</li>
-                </ul>
-
-                <h3>Learning Activities</h3>
-                <ul>
-                    <li>Studied correlation as a measure of the relationship between two variables, and the difference between independent and dependent variables.</li>
-                    <li>Studied the Anderson-Darling normality test (<code>ad.test()</code> from the <code>nortest</code> package) as a check before running <code>cor.test()</code>.</li>
-                    <li>Studied simple linear regression, where predictions of Y plotted against X form a straight line.</li>
-                    <li>Completed Data Activity 8 using the Health_Data dataset, measuring the correlation between systolic and diastolic blood pressure and producing a scatter plot.</li>
-                </ul>
-
-                <h3>Artefacts</h3>
-
-                <p>
-                    <strong>Systolic and Diastolic Blood Pressure Correlation (Data Activity 8)</strong>
-                </p>
-
-                <p>
+      </div>
+    </details>
+    <details class="unit card" id="unit-10-correlation-and-regression">
+      <summary><span class="badge">Unit 10</span><span class="unit-title">Correlation and Regression</span><span class="unit-tags"><span class="tag">Learning Outcomes</span><span class="tag">Learning Activities</span><span class="tag">Artefacts</span><span class="tag">Reflection</span></span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="unit-body prose">
+<h3>Learning Outcomes</h3>
+<ul>
+<li>Measure the strength and direction of the relationship between two numerical variables.</li>
+<li>Check normality before choosing between Pearson's and Spearman's correlation.</li>
+<li>Understand the principles of simple linear regression.</li>
+</ul>
+<h3>Learning Activities</h3>
+<ul>
+<li>Studied correlation as a measure of the relationship between two variables, and the difference between independent and dependent variables.</li>
+<li>Studied the Anderson-Darling normality test (<code>ad.test()</code> from the <code>nortest</code> package) as a check before running <code>cor.test()</code>.</li>
+<li>Studied simple linear regression, where predictions of Y plotted against X form a straight line.</li>
+<li>Completed Data Activity 8 using the Health_Data dataset, measuring the correlation between systolic and diastolic blood pressure and producing a scatter plot.</li>
+</ul>
+<h3>Artefacts</h3>
+<p>
+<strong>Systolic and Diastolic Blood Pressure Correlation (Data Activity 8)</strong>
+</p>
+<p>
                     The Health_Data dataset (n = 210) was imported with the <code>haven</code>
                     package. Normality of <code>sbp</code> and <code>dbp</code> was checked with the
                     Anderson-Darling test, and the correlation was then measured with
@@ -708,22 +634,18 @@
                     plot was produced with <code>plot()</code>, with a fitted regression line added
                     using <code>abline(lm())</code>.
                 </p>
-
-                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
-                    <img src="images/activity8.png" alt="Data Activity 8 - sbp and dbp correlation output and scatter plot" />
-                </span>
-
-                <p>Key findings:</p>
-                <ul>
-                    <li>Anderson-Darling test: neither variable was normally distributed (sbp: A = 2.447, p &lt; 0.001; dbp: A = 1.809, p &lt; 0.001), so Spearman's correlation was treated as the main result.</li>
-                    <li>Spearman's rho = 0.802, p &lt; 0.001: a strong positive relationship between systolic and diastolic blood pressure.</li>
-                    <li>Pearson's r = 0.847, 95% CI [0.804, 0.881], t = 22.96, df = 208, p &lt; 0.001, which closely agreed with the Spearman result.</li>
-                    <li>The scatter plot showed points rising together along the fitted line, with readings grouped in vertical bands at round values such as 120 and 140 mmHg.</li>
-                </ul>
-
-                <h3>Reflection</h3>
-
-                <p>
+<span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+<img alt="Data Activity 8 - sbp and dbp correlation output and scatter plot" src="images/activity8.png"/>
+</span>
+<p>Key findings:</p>
+<ul>
+<li>Anderson-Darling test: neither variable was normally distributed (sbp: A = 2.447, p &lt; 0.001; dbp: A = 1.809, p &lt; 0.001), so Spearman's correlation was treated as the main result.</li>
+<li>Spearman's rho = 0.802, p &lt; 0.001: a strong positive relationship between systolic and diastolic blood pressure.</li>
+<li>Pearson's r = 0.847, 95% CI [0.804, 0.881], t = 22.96, df = 208, p &lt; 0.001, which closely agreed with the Spearman result.</li>
+<li>The scatter plot showed points rising together along the fitted line, with readings grouped in vertical bands at round values such as 120 and 140 mmHg.</li>
+</ul>
+<h3>Reflection</h3>
+<p>
                     This activity showed me why the normality check has to come before the choice of
                     test. Both variables failed the Anderson-Darling test, so Spearman's correlation
                     was the correct main result, while Pearson's r was reported alongside it as a
@@ -733,8 +655,7 @@
                     observations. The strength of r and the narrow confidence interval were more
                     informative than the p-value itself.
                 </p>
-
-                <p>
+<p>
                     A strong correlation does not mean that one pressure causes the other. Both are
                     readings of the same cardiovascular system, so they are expected to rise
                     together. The scatter plot also revealed something the numbers did not: many
@@ -742,32 +663,29 @@
                     measurements were rounded when recorded. This reminded me that plotting the data
                     can show features of how it was collected that a single coefficient hides.
                 </p>
-                                <hr />
-
-                <h2>Unit 11 – Regression Analysis</h2>
-
-                <h3>Learning Outcomes</h3>
-                <ul>
-                    <li>Explain the concept of regression.</li>
-                    <li>Interpret model fit, statistical significance, and coefficient interpretation.</li>
-                    <li>Create scatter plots for model building.</li>
-                    <li>Illustrate the generalised linear model in R.</li>
-                </ul>
-
-                <h3>Learning Activities</h3>
-                <ul>
-                    <li>Studied the difference between correlation and regression: in correlation it does not matter which variable is X and which is Y, but in regression it does, because predicting Y from X gives a different line from predicting X from Y.</li>
-                    <li>Studied least squares regression, residuals, R², and the assumptions of linear regression: linearity, residuals with a mean of zero, constant variance, normally distributed residuals, and independent residuals.</li>
-                    <li>Completed Data Activity 9 using the Health_Data dataset, building a simple linear regression model to predict diastolic blood pressure from systolic blood pressure and interpreting it at the 5% significance level.</li>
-                </ul>
-
-                <h3>Artefacts</h3>
-
-                <p>
-                    <strong>Predicting Diastolic from Systolic Blood Pressure (Data Activity 9)</strong>
-                </p>
-
-                <p>
+      </div>
+    </details>
+    <details class="unit card" id="unit-11-regression-analysis">
+      <summary><span class="badge">Unit 11</span><span class="unit-title">Regression Analysis</span><span class="unit-tags"><span class="tag">Learning Outcomes</span><span class="tag">Learning Activities</span><span class="tag">Artefacts</span><span class="tag">Reflection</span></span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="unit-body prose">
+<h3>Learning Outcomes</h3>
+<ul>
+<li>Explain the concept of regression.</li>
+<li>Interpret model fit, statistical significance, and coefficient interpretation.</li>
+<li>Create scatter plots for model building.</li>
+<li>Illustrate the generalised linear model in R.</li>
+</ul>
+<h3>Learning Activities</h3>
+<ul>
+<li>Studied the difference between correlation and regression: in correlation it does not matter which variable is X and which is Y, but in regression it does, because predicting Y from X gives a different line from predicting X from Y.</li>
+<li>Studied least squares regression, residuals, R², and the assumptions of linear regression: linearity, residuals with a mean of zero, constant variance, normally distributed residuals, and independent residuals.</li>
+<li>Completed Data Activity 9 using the Health_Data dataset, building a simple linear regression model to predict diastolic blood pressure from systolic blood pressure and interpreting it at the 5% significance level.</li>
+</ul>
+<h3>Artefacts</h3>
+<p>
+<strong>Predicting Diastolic from Systolic Blood Pressure (Data Activity 9)</strong>
+</p>
+<p>
                     A simple linear regression model was fitted in R with <code>lm(dbp ~ sbp)</code>
                     on the Health_Data dataset (n = 210). Results were read with
                     <code>summary()</code> and <code>confint()</code>. The model assumptions were
@@ -775,24 +693,20 @@
                     residuals (<code>ad.test()</code>), and the four diagnostic plots from
                     <code>plot(model)</code>.
                 </p>
-
-                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
-                    <img src="images/activity9.png" alt="Data Activity 9 - Regression output and residual diagnostic plots" />
-                </span>
-
-                <p>Key findings:</p>
-                <ul>
-                    <li>Estimated regression equation: dbp = 19.41 + 0.496 × sbp.</li>
-                    <li>Slope: b₁ = 0.496, 95% CI [0.453, 0.539], t = 22.96, p &lt; 0.001. At the 5% level, H₀ (b₁ = 0) is rejected: systolic BP is a significant predictor of diastolic BP. Each 1 mmHg rise in sbp predicts a rise of about 0.5 mmHg in dbp.</li>
-                    <li>Model fit: R² = 0.717 (adjusted R² = 0.716), so systolic BP explains about 72% of the variation in diastolic BP. F(1, 208) = 527.2, p &lt; 0.001.</li>
-                    <li>Residual standard error = 6.26 mmHg, meaning typical predictions miss the observed value by around 6 mmHg.</li>
-                    <li>Assumption checks: the mean of the residuals was effectively zero; the Anderson-Darling test did not reject normality of the residuals (A = 0.575, p = 0.134); the residual plots showed no clear pattern or change in spread, and no point exceeded Cook's distance.</li>
-                    <li>Example prediction: a patient with sbp = 120 mmHg has a predicted dbp of about 78.9 mmHg.</li>
-                </ul>
-
-                <h3>Reflection</h3>
-
-                <p>
+<span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+<img alt="Data Activity 9 - Regression output and residual diagnostic plots" src="images/activity9.png"/>
+</span>
+<p>Key findings:</p>
+<ul>
+<li>Estimated regression equation: dbp = 19.41 + 0.496 × sbp.</li>
+<li>Slope: b₁ = 0.496, 95% CI [0.453, 0.539], t = 22.96, p &lt; 0.001. At the 5% level, H₀ (b₁ = 0) is rejected: systolic BP is a significant predictor of diastolic BP. Each 1 mmHg rise in sbp predicts a rise of about 0.5 mmHg in dbp.</li>
+<li>Model fit: R² = 0.717 (adjusted R² = 0.716), so systolic BP explains about 72% of the variation in diastolic BP. F(1, 208) = 527.2, p &lt; 0.001.</li>
+<li>Residual standard error = 6.26 mmHg, meaning typical predictions miss the observed value by around 6 mmHg.</li>
+<li>Assumption checks: the mean of the residuals was effectively zero; the Anderson-Darling test did not reject normality of the residuals (A = 0.575, p = 0.134); the residual plots showed no clear pattern or change in spread, and no point exceeded Cook's distance.</li>
+<li>Example prediction: a patient with sbp = 120 mmHg has a predicted dbp of about 78.9 mmHg.</li>
+</ul>
+<h3>Reflection</h3>
+<p>
                     This activity connected directly to Data Activity 8. The R² of 0.717 is the
                     square of the Pearson correlation found there (0.847² ≈ 0.717), which made the
                     link between correlation and regression concrete for me rather than just a rule
@@ -802,8 +716,7 @@
                     residuals are normal, not the variables themselves, and the residuals passed
                     the Anderson-Darling test.
                 </p>
-
-                <p>
+<p>
                     The output also showed me that a significant result is not the same as a precise
                     one. The slope is highly significant, yet a typical prediction is still around
                     6 mmHg away from the real value, and about 28% of the variation in diastolic BP
@@ -812,57 +725,50 @@
                     rather than replace a direct measurement. The equation is also an estimate from
                     one sample, and it should not be used for sbp values outside the observed range.
                 </p>
-                                <hr />
-
-                <h2>Unit 12 – Bayesian Data Analysis</h2>
-
-                <h3>Learning Outcomes</h3>
-                <ul>
-                    <li>Know the importance of Bayesian data analysis.</li>
-                    <li>Explore the features of Bayes' Theorem.</li>
-                    <li>Assess the strengths and limitations of Bayesian data analysis.</li>
-                </ul>
-
-                <h3>Learning Activities</h3>
-                <ul>
-                    <li>Studied Bayes' Theorem as a way of updating a prior probability with new data (the likelihood) to obtain a posterior probability: posterior ∝ prior × likelihood.</li>
-                    <li>Studied the four steps of a Bayesian analysis: designing a model for the data, specifying a prior distribution for its parameters, calculating the posterior distribution from the model and the data, and summarising and visualising the posterior.</li>
-                    <li>Compared Bayesian and frequentist inference: frequentist methods such as p-values and confidence intervals treat the data as repeatable and the parameters as fixed, P(data | parameters), while Bayesian methods treat the parameters as uncertain and the observed data as fixed, P(parameters | data).</li>
-                    <li>Reviewed the strengths and limitations of Bayesian analysis, including the ability to quantify evidence for the null hypothesis using a Bayes factor, the critique of p-values (Gigerenzer, 2004), its greater flexibility, and its greater complexity.</li>
-                    <li>Completed the Bayes' Probability Activity using recovery reporting in Kerala and Delhi from the COVID-19 India dataset.</li>
-                </ul>
-
-                <h3>Artefacts</h3>
-
-                <p>
-                    <strong>Bayes' Theorem Applied to COVID-19 Recovery Reports (Bayes' Probability Activity)</strong>
-                </p>
-
-                <p>
+      </div>
+    </details>
+    <details class="unit card" id="unit-12-bayesian-data-analysis">
+      <summary><span class="badge">Unit 12</span><span class="unit-title">Bayesian Data Analysis</span><span class="unit-tags"><span class="tag">Learning Outcomes</span><span class="tag">Learning Activities</span><span class="tag">Artefacts</span><span class="tag">Reflection</span></span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="unit-body prose">
+<h3>Learning Outcomes</h3>
+<ul>
+<li>Know the importance of Bayesian data analysis.</li>
+<li>Explore the features of Bayes' Theorem.</li>
+<li>Assess the strengths and limitations of Bayesian data analysis.</li>
+</ul>
+<h3>Learning Activities</h3>
+<ul>
+<li>Studied Bayes' Theorem as a way of updating a prior probability with new data (the likelihood) to obtain a posterior probability: posterior ∝ prior × likelihood.</li>
+<li>Studied the four steps of a Bayesian analysis: designing a model for the data, specifying a prior distribution for its parameters, calculating the posterior distribution from the model and the data, and summarising and visualising the posterior.</li>
+<li>Compared Bayesian and frequentist inference: frequentist methods such as p-values and confidence intervals treat the data as repeatable and the parameters as fixed, P(data | parameters), while Bayesian methods treat the parameters as uncertain and the observed data as fixed, P(parameters | data).</li>
+<li>Reviewed the strengths and limitations of Bayesian analysis, including the ability to quantify evidence for the null hypothesis using a Bayes factor, the critique of p-values (Gigerenzer, 2004), its greater flexibility, and its greater complexity.</li>
+<li>Completed the Bayes' Probability Activity using recovery reporting in Kerala and Delhi from the COVID-19 India dataset.</li>
+</ul>
+<h3>Artefacts</h3>
+<p>
+<strong>Bayes' Theorem Applied to COVID-19 Recovery Reports (Bayes' Probability Activity)</strong>
+</p>
+<p>
                     Using the counts given in the activity (270 daily state reports, of which 52 came
                     from Kerala and 20 from Delhi; 55 reports showed recoveries, 19 from Kerala and 8
                     from Delhi), the basic and conditional probabilities were calculated by hand and
                     verified in R. Bayes' Theorem was then used to find the probability that a
                     report showing recoveries came from Kerala.
                 </p>
-
-                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
-                    <img src="images/bayes_activity.png" alt="Bayes' Probability Activity - R calculation output" />
-                </span>
-
-                <p>Key findings:</p>
-                <ul>
-                    <li>P(Kerala) = 52 / 270 = 0.193 (19.3%).</li>
-                    <li>P(Recovery) = 55 / 270 = 0.204 (20.4%).</li>
-                    <li>P(Recovery | Kerala) = 19 / 52 = 0.365 (36.5%).</li>
-                    <li>P(Recovery | Delhi) = 8 / 20 = 0.400 (40.0%).</li>
-                    <li>Bayes' Theorem: P(Kerala | Recovery) = P(Recovery | Kerala) × P(Kerala) / P(Recovery) = (0.365 × 0.193) / 0.204 = 0.345 (34.5%), which matches the direct count of 19 / 55.</li>
-                    <li>In plain terms: Kerala produced about one in five of all reports, but about one in three of the reports that showed recoveries.</li>
-                </ul>
-
-                <h3>Reflection</h3>
-
-                <p>
+<span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+<img alt="Bayes' Probability Activity - R calculation output" src="images/bayes_activity.png"/>
+</span>
+<p>Key findings:</p>
+<ul>
+<li>P(Kerala) = 52 / 270 = 0.193 (19.3%).</li>
+<li>P(Recovery) = 55 / 270 = 0.204 (20.4%).</li>
+<li>P(Recovery | Kerala) = 19 / 52 = 0.365 (36.5%).</li>
+<li>P(Recovery | Delhi) = 8 / 20 = 0.400 (40.0%).</li>
+<li>Bayes' Theorem: P(Kerala | Recovery) = P(Recovery | Kerala) × P(Kerala) / P(Recovery) = (0.365 × 0.193) / 0.204 = 0.345 (34.5%), which matches the direct count of 19 / 55.</li>
+<li>In plain terms: Kerala produced about one in five of all reports, but about one in three of the reports that showed recoveries.</li>
+</ul>
+<h3>Reflection</h3>
+<p>
                     This activity made the language of Bayes' Theorem concrete. The prior, P(Kerala)
                     = 19.3%, was updated by the evidence that a report showed recoveries, giving a
                     posterior of 34.5%, so knowing about the recovery almost doubled the probability
@@ -874,8 +780,7 @@
                     applies here: these reports are repeated daily, cumulative records rather than
                     independent cases, so the probabilities describe reports, not patients.
                 </p>
-
-                <p>
+<p>
                     The unit also changed how I look back at my earlier results. In Data Activities
                     5 and 6, three of my tests ended with "fail to reject H₀" (p = 0.203, 0.800 and
                     0.855). Within the frequentist approach, I could only say that there was not
@@ -886,67 +791,57 @@
                     arrives is also familiar from my work in network engineering, where an initial
                     assumption about the cause of a fault is revised as monitoring data comes in.
                 </p>
-                                <hr />
-
-                <h2>End of Module Assignment 1 – Statistical Analysis of Diabetes Risk Factors</h2>
-
-                <h3>Learning Outcomes</h3>
-                <ul>
-                    <li>Apply mathematical and statistical methods in R to a real health dataset to support decision-making.</li>
-                    <li>Critically evaluate statistical results, including the limits of p-values, model fit and classification accuracy.</li>
-                    <li>Critically appraise and present the results of a statistical analysis to a non-specialist audience.</li>
-                </ul>
-
-                <h3>Learning Activities</h3>
-                <ul>
-                    <li>Analysed the Pima Indians Diabetes dataset (768 women, 268 with diabetes) in R using Google Colab, bringing together the methods from Units 1–11.</li>
-                    <li>Cleaned the data by recoding biologically impossible zeros as missing values and checking whether the 392 complete cases changed the diabetes rate (33% against 35% in the full sample).</li>
-                    <li>Produced descriptive statistics, visualisations and outlier checks (1.5×IQR), and calculated diabetes rates by age group, BMI category (WHO, 2000) and number of pregnancies.</li>
-                    <li>Applied chi-square tests, a t-test with Shapiro-Wilk and Mann-Whitney checks, Cohen's d, Spearman correlations, Welch's ANOVA with Kruskal-Wallis, multiple linear regression with relative importance, and logistic regression with the Hosmer-Lemeshow test, a confusion matrix and a likelihood ratio test for a BMI×Age interaction.</li>
-                    <li>Recorded a 20-minute PowerPoint presentation with voice-over, and submitted it with a transcript (about 1,600 words) and a separate R code file.</li>
-                </ul>
-
-                <h3>Artefacts</h3>
-
-                <p>
-                    <strong>Presentation: Statistical Analysis of Diabetes Risk Factors in Pima Women</strong>
-                </p>
-
-                <p>
+      </div>
+    </details>
+    <details class="unit card" id="ema1">
+      <summary><span class="badge">Assessment</span><span class="unit-title">End of Module Assignment 1 – Statistical Analysis of Diabetes Risk Factors</span><span class="unit-tags"><span class="tag">Learning Outcomes</span><span class="tag">Learning Activities</span><span class="tag">Artefacts</span><span class="tag">Reflection</span></span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="unit-body prose">
+<h3>Learning Outcomes</h3>
+<ul>
+<li>Apply mathematical and statistical methods in R to a real health dataset to support decision-making.</li>
+<li>Critically evaluate statistical results, including the limits of p-values, model fit and classification accuracy.</li>
+<li>Critically appraise and present the results of a statistical analysis to a non-specialist audience.</li>
+</ul>
+<h3>Learning Activities</h3>
+<ul>
+<li>Analysed the Pima Indians Diabetes dataset (768 women, 268 with diabetes) in R using Google Colab, bringing together the methods from Units 1–11.</li>
+<li>Cleaned the data by recoding biologically impossible zeros as missing values and checking whether the 392 complete cases changed the diabetes rate (33% against 35% in the full sample).</li>
+<li>Produced descriptive statistics, visualisations and outlier checks (1.5×IQR), and calculated diabetes rates by age group, BMI category (WHO, 2000) and number of pregnancies.</li>
+<li>Applied chi-square tests, a t-test with Shapiro-Wilk and Mann-Whitney checks, Cohen's d, Spearman correlations, Welch's ANOVA with Kruskal-Wallis, multiple linear regression with relative importance, and logistic regression with the Hosmer-Lemeshow test, a confusion matrix and a likelihood ratio test for a BMI×Age interaction.</li>
+<li>Recorded a 20-minute PowerPoint presentation with voice-over, and submitted it with a transcript (about 1,600 words) and a separate R code file.</li>
+</ul>
+<h3>Artefacts</h3>
+<p>
+<strong>Presentation: Statistical Analysis of Diabetes Risk Factors in Pima Women</strong>
+</p>
+<p>
                     Selected slides from the submitted presentation. Each slide combines the key
                     chart or result with a short R code box, following Dr. Euler's guidance that
                     key code should be shown and briefly explained, with the full code submitted
                     as a separate file.
                 </p>
-
-                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
-                    <img src="images/ema1_slide03.png" alt="EMA1 slide 3 - data cleaning and missing values" />
-                </span>
-
-                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
-                    <img src="images/ema1_slide06.png" alt="EMA1 slide 6 - diabetes rates by age group, BMI category and pregnancies" />
-                </span>
-
-                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
-                    <img src="images/ema1_slide11.png" alt="EMA1 slide 11 - removing insulin reveals the effect of BMI" />
-                </span>
-
-                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
-                    <img src="images/ema1_slide13.png" alt="EMA1 slide 13 - confusion matrix and classification threshold" />
-                </span>
-
-                <p>Key findings:</p>
-                <ul>
-                    <li>BMI showed the clearest pattern: the diabetes rate rose from 7% in women of normal weight to 46% in women with obesity, χ²(2) = 77.0, p &lt; .001.</li>
-                    <li>Women with diabetes had higher glucose (142 against 111, Cohen's d = 1.19) and more pregnancies (median 4 against 2), both p &lt; .001.</li>
-                    <li>The multiple regression explained 39% of the variation in glucose; insulin accounted for about two thirds of this. Removing insulin revealed a significant effect of BMI (n = 724, p &lt; .001), suggesting insulin acts as a mediator (Zapf et al., 2024).</li>
-                    <li>In the logistic model, a 5-point increase in BMI raised the odds of diabetes by about 57%. The model fitted well (Hosmer-Lemeshow p = 0.20) and reached 77% accuracy, but sensitivity was only 57%, missing 114 women with diabetes; lowering the threshold to 0.3 raised sensitivity to 77%.</li>
-                    <li>The BMI×Age interaction was not significant (likelihood ratio test p = 0.45, OR = 1.001), and the AIC favoured the simpler model.</li>
-                </ul>
-
-                <h3>Reflection</h3>
-
-                <p>
+<span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+<img alt="EMA1 slide 3 - data cleaning and missing values" src="images/ema1_slide03.png"/>
+</span>
+<span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+<img alt="EMA1 slide 6 - diabetes rates by age group, BMI category and pregnancies" src="images/ema1_slide06.png"/>
+</span>
+<span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+<img alt="EMA1 slide 11 - removing insulin reveals the effect of BMI" src="images/ema1_slide11.png"/>
+</span>
+<span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+<img alt="EMA1 slide 13 - confusion matrix and classification threshold" src="images/ema1_slide13.png"/>
+</span>
+<p>Key findings:</p>
+<ul>
+<li>BMI showed the clearest pattern: the diabetes rate rose from 7% in women of normal weight to 46% in women with obesity, χ²(2) = 77.0, p &lt; .001.</li>
+<li>Women with diabetes had higher glucose (142 against 111, Cohen's d = 1.19) and more pregnancies (median 4 against 2), both p &lt; .001.</li>
+<li>The multiple regression explained 39% of the variation in glucose; insulin accounted for about two thirds of this. Removing insulin revealed a significant effect of BMI (n = 724, p &lt; .001), suggesting insulin acts as a mediator (Zapf et al., 2024).</li>
+<li>In the logistic model, a 5-point increase in BMI raised the odds of diabetes by about 57%. The model fitted well (Hosmer-Lemeshow p = 0.20) and reached 77% accuracy, but sensitivity was only 57%, missing 114 women with diabetes; lowering the threshold to 0.3 raised sensitivity to 77%.</li>
+<li>The BMI×Age interaction was not significant (likelihood ratio test p = 0.45, OR = 1.001), and the AIC favoured the simpler model.</li>
+</ul>
+<h3>Reflection</h3>
+<p>
                     This assignment was the first time I used almost every method from the module on
                     one dataset, and it showed me that choosing a test is only the start. The most
                     important lesson came from the regression. My first model suggested that BMI did
@@ -955,8 +850,7 @@
                     variable on the pathway between weight and glucose can hide a real effect. Without
                     questioning that first result, I would have presented a wrong conclusion.
                 </p>
-
-                <p>
+<p>
                     The classification results taught me a similar lesson. An accuracy of 77% sounded
                     good until I compared it with the 65% achieved by predicting "no diabetes" for
                     everyone. For screening, missing 114 women with diabetes matters more than a
@@ -967,8 +861,7 @@
                     close to my work in network engineering, where a system has to keep working when
                     one component fails.
                 </p>
-
-                <p>
+<p>
                     Presenting to a listener was harder than doing the analysis. My first transcript
                     was almost 2,500 words, so I had to decide what the audience really needed to hear
                     and explain terms such as Cohen's d and multicollinearity in plain language. In
@@ -976,147 +869,139 @@
                     prediction model on separate data, since this model was evaluated on the same data
                     it was built from.
                 </p>
-
-                <hr />
-
-                <h2>Professional Skills Matrix – Module 3</h2>
-
-                <p>
+      </div>
+    </details>
+    <section class="card prose" id="professional-skills-matrix-module-3"><h2>Professional Skills Matrix – Module 3</h2>
+<p>
                     Self-assessment of the nine professional skills at the start and end of the
                     Numerical Analysis module (1 = novice, 5 = expert), with the evidence from this
                     module that supports each rating.
                 </p>
-
-                <div class="table-wrapper">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Skill</th>
-                                <th>Start</th>
-                                <th>End</th>
-                                <th>Evidence from this module</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Time management</td>
-                                <td>3</td>
-                                <td>4</td>
-                                <td>Studied all 12 units alongside full-time work; completed the test preparation (problems A–H) before the single-sitting Mathematical Test.</td>
-                            </tr>
-                            <tr>
-                                <td>Critical thinking and analysis</td>
-                                <td>3</td>
-                                <td>4</td>
-                                <td>Identified time as a confounding variable in Data Activity 7; followed a significant ANOVA with Tukey HSD; found and corrected the cumsum() error in Data Activity 4.</td>
-                            </tr>
-                            <tr>
-                                <td>Communication and literacy</td>
-                                <td>3</td>
-                                <td>4</td>
-                                <td>Redesigned Brown's (1994) table for a general reader; wrote plain-language findings for each activity in this e-Portfolio.</td>
-                            </tr>
-                            <tr>
-                                <td>IT and digital</td>
-                                <td>4</td>
-                                <td>5</td>
-                                <td>Used R in Google Colab with haven, dplyr, tidyr and nortest; maintained this e-Portfolio on GitHub Pages.</td>
-                            </tr>
-                            <tr>
-                                <td>Numeracy</td>
-                                <td>2</td>
-                                <td>4</td>
-                                <td>Calculated t-tests and confidence intervals by hand in the Mathematical Test; applied Bayes' Theorem manually and verified it in R.</td>
-                            </tr>
-                            <tr>
-                                <td>Research</td>
-                                <td>3</td>
-                                <td>4</td>
-                                <td>Used course readings, including Greenland et al. (2016) and Gigerenzer (2004), to interpret p-values; added Fisher's exact test when chi-square assumptions were not met.</td>
-                            </tr>
-                            <tr>
-                                <td>Interpersonal</td>
-                                <td>3</td>
-                                <td>3</td>
-                                <td>Posted the Collaborative Discussion initial post, two peer responses and a summary post; live seminar contact was limited.</td>
-                            </tr>
-                            <tr>
-                                <td>Problem-solving</td>
-                                <td>4</td>
-                                <td>5</td>
-                                <td>Fixed the getmode() tie bug; traced silent failures to a wrong column name and a misspelt state name ("Chattisgarh").</td>
-                            </tr>
-                            <tr>
-                                <td>Ethical awareness</td>
-                                <td>2</td>
-                                <td>3</td>
-                                <td>Stated analyst judgements openly; reported "fail to reject H₀" rather than "accept"; added a visible correction note instead of silently changing earlier results.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
-                <h2>Professional Development Plan (PDP) – Module 3</h2>
-
-                <p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Start</th>
+<th>End</th>
+<th>Evidence from this module</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Time management</td>
+<td>3</td>
+<td>4</td>
+<td>Studied all 12 units alongside full-time work; completed the test preparation (problems A–H) before the single-sitting Mathematical Test.</td>
+</tr>
+<tr>
+<td>Critical thinking and analysis</td>
+<td>3</td>
+<td>4</td>
+<td>Identified time as a confounding variable in Data Activity 7; followed a significant ANOVA with Tukey HSD; found and corrected the cumsum() error in Data Activity 4.</td>
+</tr>
+<tr>
+<td>Communication and literacy</td>
+<td>3</td>
+<td>4</td>
+<td>Redesigned Brown's (1994) table for a general reader; wrote plain-language findings for each activity in this e-Portfolio.</td>
+</tr>
+<tr>
+<td>IT and digital</td>
+<td>4</td>
+<td>5</td>
+<td>Used R in Google Colab with haven, dplyr, tidyr and nortest; maintained this e-Portfolio on GitHub Pages.</td>
+</tr>
+<tr>
+<td>Numeracy</td>
+<td>2</td>
+<td>4</td>
+<td>Calculated t-tests and confidence intervals by hand in the Mathematical Test; applied Bayes' Theorem manually and verified it in R.</td>
+</tr>
+<tr>
+<td>Research</td>
+<td>3</td>
+<td>4</td>
+<td>Used course readings, including Greenland et al. (2016) and Gigerenzer (2004), to interpret p-values; added Fisher's exact test when chi-square assumptions were not met.</td>
+</tr>
+<tr>
+<td>Interpersonal</td>
+<td>3</td>
+<td>3</td>
+<td>Posted the Collaborative Discussion initial post, two peer responses and a summary post; live seminar contact was limited.</td>
+</tr>
+<tr>
+<td>Problem-solving</td>
+<td>4</td>
+<td>5</td>
+<td>Fixed the getmode() tie bug; traced silent failures to a wrong column name and a misspelt state name ("Chattisgarh").</td>
+</tr>
+<tr>
+<td>Ethical awareness</td>
+<td>2</td>
+<td>3</td>
+<td>Stated analyst judgements openly; reported "fail to reject H₀" rather than "accept"; added a visible correction note instead of silently changing earlier results.</td>
+</tr>
+</tbody>
+</table>
+</div>
+    </section>
+    <section class="card prose" id="professional-development-plan-pdp-module-3"><h2>Professional Development Plan (PDP) – Module 3</h2>
+<p>
                     Action plan based on the gaps identified in the skills matrix above and the
                     lessons from this module.
                 </p>
-
-                <div class="table-wrapper">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Goal</th>
-                                <th>Action</th>
-                                <th>Target date</th>
-                                <th>Success measure</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Report effect sizes and confidence intervals, not p-values alone</td>
-                                <td>Add an effect size and a confidence interval to every statistical test I report</td>
-                                <td>From the start of Module 4</td>
-                                <td>Every reported test shows the p-value, the effect size and the CI together</td>
-                            </tr>
-                            <tr>
-                                <td>Write reliable, checked R code</td>
-                                <td>Build a personal R template that runs names(), str() and assumption checks before any test</td>
-                                <td>December 2026</td>
-                                <td>The template is used in all later modules</td>
-                            </tr>
-                            <tr>
-                                <td>Strengthen interpersonal engagement</td>
-                                <td>Attend at least half of the live seminars and reply to every peer response I receive</td>
-                                <td>Next module</td>
-                                <td>Seminar attendance and discussion replies recorded in this e-Portfolio</td>
-                            </tr>
-                            <tr>
-                            <tr>
-                                <td>Apply statistics to network performance monitoring at work</td>
-                                <td>Review alarm thresholds in terms of Type I errors (false alarms) and Type II errors (missed faults); check whether the monitoring tool can export metrics, and if so, compare a link's latency before and after a change using a paired test with a confidence interval</td>
-                                <td>Q1 2027</td>
-                                <td>One threshold review or before-and-after comparison completed and recorded</td>
-                            </tr>
-                            </tr>
-                            <tr>
-                                <td>Learn Bayesian methods in practice</td>
-                                <td>Complete one Bayesian analysis tutorial in R</td>
-                                <td>Q1 2027</td>
-                                <td>A worked Bayesian example added to this e-Portfolio</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-    </div>
-
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>Goal</th>
+<th>Action</th>
+<th>Target date</th>
+<th>Success measure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Report effect sizes and confidence intervals, not p-values alone</td>
+<td>Add an effect size and a confidence interval to every statistical test I report</td>
+<td>From the start of Module 4</td>
+<td>Every reported test shows the p-value, the effect size and the CI together</td>
+</tr>
+<tr>
+<td>Write reliable, checked R code</td>
+<td>Build a personal R template that runs names(), str() and assumption checks before any test</td>
+<td>December 2026</td>
+<td>The template is used in all later modules</td>
+</tr>
+<tr>
+<td>Strengthen interpersonal engagement</td>
+<td>Attend at least half of the live seminars and reply to every peer response I receive</td>
+<td>Next module</td>
+<td>Seminar attendance and discussion replies recorded in this e-Portfolio</td>
+</tr>
+<tr>
+<tr>
+<td>Apply statistics to network performance monitoring at work</td>
+<td>Review alarm thresholds in terms of Type I errors (false alarms) and Type II errors (missed faults); check whether the monitoring tool can export metrics, and if so, compare a link's latency before and after a change using a paired test with a confidence interval</td>
+<td>Q1 2027</td>
+<td>One threshold review or before-and-after comparison completed and recorded</td>
+</tr>
+</tr>
+<tr>
+<td>Learn Bayesian methods in practice</td>
+<td>Complete one Bayesian analysis tutorial in R</td>
+<td>Q1 2027</td>
+<td>A worked Bayesian example added to this e-Portfolio</td>
+</tr>
+</tbody>
+</table>
 </div>
-
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/main.js"></script>
-
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="wrap">&copy; Mariam Al Obaidly &middot; MSc Artificial Intelligence e-Portfolio &middot; University of Essex Online</div>
+  </footer>
+  <script src="assets/js/modern.js"></script>
 </body>
 </html>
