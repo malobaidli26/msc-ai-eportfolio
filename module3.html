@@ -888,6 +888,97 @@
                 </p>
                                 <hr />
 
+                <h2>End of Module Assignment 1 – Statistical Analysis of Diabetes Risk Factors</h2>
+
+                <h3>Learning Outcomes</h3>
+                <ul>
+                    <li>Apply mathematical and statistical methods in R to a real health dataset to support decision-making.</li>
+                    <li>Critically evaluate statistical results, including the limits of p-values, model fit and classification accuracy.</li>
+                    <li>Critically appraise and present the results of a statistical analysis to a non-specialist audience.</li>
+                </ul>
+
+                <h3>Learning Activities</h3>
+                <ul>
+                    <li>Analysed the Pima Indians Diabetes dataset (768 women, 268 with diabetes) in R using Google Colab, bringing together the methods from Units 1–11.</li>
+                    <li>Cleaned the data by recoding biologically impossible zeros as missing values and checking whether the 392 complete cases changed the diabetes rate (33% against 35% in the full sample).</li>
+                    <li>Produced descriptive statistics, visualisations and outlier checks (1.5×IQR), and calculated diabetes rates by age group, BMI category (WHO, 2000) and number of pregnancies.</li>
+                    <li>Applied chi-square tests, a t-test with Shapiro-Wilk and Mann-Whitney checks, Cohen's d, Spearman correlations, Welch's ANOVA with Kruskal-Wallis, multiple linear regression with relative importance, and logistic regression with the Hosmer-Lemeshow test, a confusion matrix and a likelihood ratio test for a BMI×Age interaction.</li>
+                    <li>Recorded a 20-minute PowerPoint presentation with voice-over, and submitted it with a transcript (about 1,600 words) and a separate R code file.</li>
+                </ul>
+
+                <h3>Artefacts</h3>
+
+                <p>
+                    <strong>Presentation: Statistical Analysis of Diabetes Risk Factors in Pima Women</strong>
+                </p>
+
+                <p>
+                    Selected slides from the submitted presentation. Each slide combines the key
+                    chart or result with a short R code box, following Dr. Euler's guidance that
+                    key code should be shown and briefly explained, with the full code submitted
+                    as a separate file.
+                </p>
+
+                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+                    <img src="images/ema1_slide03.png" alt="EMA1 slide 3 - data cleaning and missing values" />
+                </span>
+
+                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+                    <img src="images/ema1_slide06.png" alt="EMA1 slide 6 - diabetes rates by age group, BMI category and pregnancies" />
+                </span>
+
+                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+                    <img src="images/ema1_slide11.png" alt="EMA1 slide 11 - removing insulin reveals the effect of BMI" />
+                </span>
+
+                <span class="image fit" style="max-width: 700px; margin: 0 auto; display: block;">
+                    <img src="images/ema1_slide13.png" alt="EMA1 slide 13 - confusion matrix and classification threshold" />
+                </span>
+
+                <p>Key findings:</p>
+                <ul>
+                    <li>BMI showed the clearest pattern: the diabetes rate rose from 7% in women of normal weight to 46% in women with obesity, χ²(2) = 77.0, p &lt; .001.</li>
+                    <li>Women with diabetes had higher glucose (142 against 111, Cohen's d = 1.19) and more pregnancies (median 4 against 2), both p &lt; .001.</li>
+                    <li>The multiple regression explained 39% of the variation in glucose; insulin accounted for about two thirds of this. Removing insulin revealed a significant effect of BMI (n = 724, p &lt; .001), suggesting insulin acts as a mediator (Zapf et al., 2024).</li>
+                    <li>In the logistic model, a 5-point increase in BMI raised the odds of diabetes by about 57%. The model fitted well (Hosmer-Lemeshow p = 0.20) and reached 77% accuracy, but sensitivity was only 57%, missing 114 women with diabetes; lowering the threshold to 0.3 raised sensitivity to 77%.</li>
+                    <li>The BMI×Age interaction was not significant (likelihood ratio test p = 0.45, OR = 1.001), and the AIC favoured the simpler model.</li>
+                </ul>
+
+                <h3>Reflection</h3>
+
+                <p>
+                    This assignment was the first time I used almost every method from the module on
+                    one dataset, and it showed me that choosing a test is only the start. The most
+                    important lesson came from the regression. My first model suggested that BMI did
+                    not matter for glucose, which made no sense next to the chi-square results. When I
+                    removed insulin, BMI became significant, and I realised that adjusting for a
+                    variable on the pathway between weight and glucose can hide a real effect. Without
+                    questioning that first result, I would have presented a wrong conclusion.
+                </p>
+
+                <p>
+                    The classification results taught me a similar lesson. An accuracy of 77% sounded
+                    good until I compared it with the 65% achieved by predicting "no diabetes" for
+                    everyone. For screening, missing 114 women with diabetes matters more than a
+                    good overall score, so the threshold became a decision rather than a default.
+                    Practical problems were also part of the learning: the Colab runtime reset and
+                    lost my objects, and some packages failed to install, so I organised the notebook
+                    with a setup cell at the top and wrote fallback functions where needed. This is
+                    close to my work in network engineering, where a system has to keep working when
+                    one component fails.
+                </p>
+
+                <p>
+                    Presenting to a listener was harder than doing the analysis. My first transcript
+                    was almost 2,500 words, so I had to decide what the audience really needed to hear
+                    and explain terms such as Cohen's d and multicollinearity in plain language. In
+                    future, I will plan the story of the results before writing, and I will test any
+                    prediction model on separate data, since this model was evaluated on the same data
+                    it was built from.
+                </p>
+
+                <hr />
+
                 <h2>Professional Skills Matrix – Module 3</h2>
 
                 <p>
