@@ -15,11 +15,11 @@ html{scroll-behavior:smooth;scroll-padding-top:84px}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
 a{color:var(--teal)}
 img{max-width:100%;height:auto}
-.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
 
 /* top bar */
 .topbar{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--surface) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.topbar-inner{max-width:1040px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px}
+.topbar-inner{max-width:1180px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);margin-right:auto}
 .brand-mark{width:36px;height:36px;border-radius:10px;background:var(--brand);color:#fff;display:grid;place-items:center;font-weight:700;font-size:14px;letter-spacing:.5px}
 .brand-text{display:flex;flex-direction:column;line-height:1.2}
@@ -150,3 +150,7 @@ details[open] summary{border-bottom:1px solid var(--line)}
 .quick a{background:#f1eefc;border-color:#e2dcf8;color:#5146b0}
 .quick a:hover{background:#e7e2fb;border-color:#c9bff4}
 .mgrid .mcard h3{color:#2b2840}
+
+/* larger screens */
+@media (min-width:1500px){body{zoom:1.12}}
+@media (min-width:1900px){body{zoom:1.25}}
