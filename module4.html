@@ -34,9 +34,153 @@
     </div>
   </section>
   <main class="wrap page">
-    <section class="card prose overview">
-      <h2>Module Overview</h2>
-      <p><em>This module is in progress. Learning outcomes, activities, artefacts and reflections will be added unit by unit.</em></p>
+    <section class="card prose overview"><h2>Module Overview</h2>
+<p>The Intelligent Agents module explores how software agents are designed, how they reason and plan, how they communicate with each other, and how Large Language Models (LLMs) can support planning and task decomposition. The module combines a team design proposal for an LLM-powered planning agent, an individual implementation and presentation, and this reflective e-Portfolio.</p>
+<p><em>This module is in progress. Units, artefacts and reflections are added as I work through the module.</em></p>
+    </section>
+    <div class="units-head">
+      <h2>Units</h2>
+      <div class="units-tools"><button class="btn-ghost" data-expand="all">Expand all</button><button class="btn-ghost" data-expand="none">Collapse all</button></div>
+    </div>
+    <nav class="chips">
+        <a class="chip" href="#unit-1">Unit 1</a>
+        <a class="chip" href="#unit-2">Unit 2</a>
+        <a class="chip" href="#unit-3">Unit 3</a>
+        <a class="chip" href="#cd1">Collaborative Discussion 1</a>
+        <a class="chip" href="#team-project">Team Project Log</a>
+    </nav>
+
+    <details class="unit card" id="unit-1">
+      <summary><span class="badge">Unit 1</span><span class="unit-title">Introduction to Agent-Based Computing</span><span class="unit-tags"><span class="tag">Key Topics</span><span class="tag">Learning Activities</span><span class="tag">Reflection</span></span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="unit-body prose">
+<h3>Key Topics</h3>
+<ul>
+<li>The five trends in computing that led to agent-based systems: ubiquity, interconnection, intelligence, delegation and human-orientation (Wooldridge, 2009).</li>
+<li>What makes a program an agent: autonomy, reactivity, proactiveness and social ability (Wooldridge and Jennings, 1995).</li>
+<li>Types of agents (simple reflex, model-based, goal-based, utility-based and learning) and properties of environments (Russell and Norvig, 2021).</li>
+<li>Adjustable autonomy: when an agent should hand a decision back to a human.</li>
+</ul>
+<h3>Learning Activities</h3>
+<ul>
+<li>Read Chapter 2 of Wooldridge (2009) and the Unit 1 lecturecast.</li>
+<li>Attended the introductory seminar on the module assessments and team working.</li>
+<li>Posted my Initial Post for Collaborative Discussion 1 (see below).</li>
+<li>Contacted my team and started organising the Development Team Project (see the Team Project Log).</li>
+</ul>
+<h3>Reflection</h3>
+<p>The most useful idea for me in this unit was the difference between a normal program and an agent. A script runs the same steps every time, while an agent notices what is happening around it and decides what to do. As a network engineer, I could see this clearly: our monitoring tools raise alerts, but they do not decide anything. This made me think more carefully about how much freedom I would actually give an agent, which became the main theme of my first discussion post.</p>
+      </div>
+    </details>
+
+    <details class="unit card" id="unit-2">
+      <summary><span class="badge">Unit 2</span><span class="unit-title">Introduction to First-Order Logic</span><span class="unit-tags"><span class="tag">Key Topics</span><span class="tag">Learning Activities</span><span class="tag">Reflection</span></span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="unit-body prose">
+<h3>Key Topics</h3>
+<ul>
+<li>Why agents need a precise language: natural language is ambiguous, while first-order logic (FOL) gives each sentence one meaning that is either true or false.</li>
+<li>Constants, variables, predicates and functions; connectives (&and;, &or;, &not;, &rArr;, &hArr;).</li>
+<li>Quantifiers (&forall; and &exist;) and why their order changes the meaning.</li>
+<li>Knowledge bases (TELL, ASK) and knowledge engineering (Russell and Norvig, 2021, Chapter 8).</li>
+</ul>
+<h3>Learning Activities</h3>
+<ul>
+<li>Studied Chapter 8 of Russell and Norvig (2021) in preparation for the Unit 2 seminar.</li>
+<li>Attended the Unit 2 seminar on first-order logic and the team assignment.</li>
+<li>Practised translating short networking statements into FOL, for example: &forall;x (Link(x) &and; Down(x)) &rArr; Alert(x).</li>
+<li>Replied to peer feedback on my Initial Post.</li>
+</ul>
+<h3>Reflection</h3>
+<p>First-order logic was not easy for me at first, mainly because of the number of new symbols. What helped was linking each idea to something I already know from networking, such as treating a predicate like a yes/no check on a device. I also realised that the shared data format in our team project is a simple version of the same idea: all agents need to agree on the meaning of the information they exchange.</p>
+      </div>
+    </details>
+
+    <details class="unit card" id="unit-3">
+      <summary><span class="badge">Unit 3</span><span class="unit-title">Agent Architectures</span><span class="unit-tags"><span class="tag">Key Topics</span><span class="tag">Learning Activities</span><span class="tag">Reflection</span></span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="unit-body prose">
+<h3>Key Topics</h3>
+<ul>
+<li>Symbolic (deliberative) agents and their limits: the transduction and reasoning problems.</li>
+<li>The agent control loop: see, update, act.</li>
+<li>Practical reasoning and the role of commitment to plans (Bratman, Israel and Pollack, 1988); Beliefs, Desires and Intentions (BDI).</li>
+<li>Reactive agents and the subsumption architecture (Brooks, 1991), and emergent behaviour.</li>
+</ul>
+<h3>Learning Activities</h3>
+<ul>
+<li>Studied the Unit 3 readings on agent architectures.</li>
+<li>Wrote peer responses to colleagues and replied to further feedback in Collaborative Discussion 1.</li>
+<li>Used the unit to shape the initial architecture for our team project, with a Planner that commits to a user-approved plan.</li>
+</ul>
+<h3>Reflection</h3>
+<p>This unit connected directly to our team project. Before it, I was thinking about the system only as a set of steps. After studying Bratman's idea of commitment, I understood why our Planner should stick to the plan the user approves and only change it when the results are weak. I also learned to fix how the system should behave first, and only then choose the theory that describes it, instead of forcing the design to fit a name.</p>
+      </div>
+    </details>
+
+    <details class="unit card" id="cd1">
+      <summary><span class="badge">e-Portfolio</span><span class="unit-title">Collaborative Discussion 1: Agent Based Systems</span><span class="unit-tags"><span class="tag">Initial Post</span><span class="tag">Feedback</span><span class="tag">Peer Responses</span></span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="unit-body prose">
+<h3>Initial Post (25 October 2026)</h3>
+<p>When I look back at how my work as a network engineer has changed, the reasons behind the rise of agent-based systems feel very familiar. Wooldridge (2009) links it to five trends in computing: ubiquity, interconnection, intelligence, delegation and human-orientation. I can see most of them in my own workplace. Our network is no longer in one building or even one country; we now support branches on several continents. On top of that, attacks and updates arrive so quickly that, honestly, a human team cannot keep up with all of them. At that point, handing some of the work to software that can act on its own becomes a practical need rather than a choice (Wooldridge and Jennings, 1995).</p>
+<p>We have already seen the benefits. We use an automated monitoring system that checks the performance of all our devices every day, from IP phones to switches and firewalls. It never stops, while our team works seven-hour shifts, and it catches details that we sometimes missed during manual checks. For me, this is autonomy and reactivity in practice.</p>
+<p>That said, we have been careful. We do not let these systems make decisions on critical parts of the network. If an automated tool decided to block traffic that turned out to be important, it could take a live channel off air, and in broadcasting that is a serious risk. Wooldridge (2009) describes this balance as adjustable autonomy: the decision should go back to a person when the potential harm is high. In my view, two things would make us more comfortable: letting the agent suggest an action that an engineer approves first (Parasuraman, Sheridan and Wickens, 2000), and testing it for a long period in a lab environment before it goes live.</p>
+<p>So, I see agents as a real benefit for organisations, but trust has to be built step by step, especially where the cost of a mistake is high.</p>
+
+<h3>Feedback Received and My Replies</h3>
+<ul>
+<li><strong>Agnieszka (26 Oct):</strong> argued that waiting for human approval can be too slow during time-critical incidents. <em>My reply:</em> autonomy should depend on risk, with small urgent actions automated and high-impact actions still approved by an engineer.</li>
+<li><strong>Mark (27 Oct):</strong> pointed out that people may over-rely on the agent, and that approval does not fix a poorly chosen objective. <em>My reply:</em> clarified that our current system is monitoring only, and agreed that agents should explain their reasoning and that thresholds need regular review.</li>
+<li><strong>Adam (31 Oct):</strong> highlighted skill loss through automation (Bainbridge, 1983) and suggested shadow mode and rollback. <em>My reply:</em> shadow mode gives a measurable way to judge readiness, and keeping people's skills sharp should be part of the design.</li>
+</ul>
+
+<h3>My Peer Responses</h3>
+<ul>
+<li><strong>To Agnieszka:</strong> questioned whether wider adoption of agents means deeper trust, and supported hybrid designs where the LLM plans and rules constrain actions.</li>
+<li><strong>To Mark:</strong> used a networking example of a tool rewarded for closing alerts quickly while faults remain, and suggested involving affected stakeholders when defining objectives.</li>
+<li><strong>To Adam:</strong> noted a tension between upgrading agents individually and unpredictable interactions between agents, and answered his question using reliability and the cost of errors (Parasuraman, Sheridan and Wickens, 2000) and adjustable autonomy in teams (Scerri, Pynadath and Tambe, 2002).</li>
+</ul>
+
+<h3>Summary Post</h3>
+<p><em>To be added.</em></p>
+
+<h3>How My View Changed</h3>
+<p>I started the discussion believing that critical decisions should always wait for human approval. My colleagues showed me that this can be too slow, that approval alone does not guarantee good decisions, and that automation can weaken the skills people need when they step in. I now think the real question is not how much autonomy an agent has, but how well that autonomy is designed.</p>
+
+<h3>References</h3>
+<ul>
+<li>Bainbridge, L. (1983) Ironies of automation. <em>Automatica</em> 19(6): 775&ndash;779.</li>
+<li>Parasuraman, R., Sheridan, T.B. and Wickens, C.D. (2000) A model for types and levels of human interaction with automation. <em>IEEE Transactions on Systems, Man, and Cybernetics &ndash; Part A: Systems and Humans</em> 30(3): 286&ndash;297.</li>
+<li>Scerri, P., Pynadath, D.V. and Tambe, M. (2002) Towards adjustable autonomy for the real world. <em>Journal of Artificial Intelligence Research</em> 17: 171&ndash;228.</li>
+<li>Wooldridge, M. (2009) <em>An Introduction to MultiAgent Systems</em>. 2nd ed. New York: John Wiley &amp; Sons.</li>
+<li>Wooldridge, M. and Jennings, N.R. (1995) Intelligent agents: theory and practice. <em>The Knowledge Engineering Review</em> 10(2): 115&ndash;152.</li>
+</ul>
+      </div>
+    </details>
+
+    <details class="unit card" id="team-project">
+      <summary><span class="badge">Team</span><span class="unit-title">Development Team Project Log</span><span class="unit-tags"><span class="tag">Team Leader</span><span class="tag">Collaboration</span></span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="unit-body prose">
+<p>Our team of four is writing a design proposal for an LLM-powered planning agent for academic research. I am the team leader. This log records the main steps and my role in them.</p>
+<div class="table-wrapper"><table>
+<thead><tr><th>Date</th><th>What happened</th><th>My role / note</th></tr></thead>
+<tbody>
+<tr><td>25 Oct 2026</td><td>Emailed the team to start the project, shared a proposed plan and asked members to choose their sections.</td><td>Took the lead in starting communication.</td></tr>
+<tr><td>26 Oct 2026</td><td>Followed up with the team in the Blackboard group chat.</td><td>Wanted to make sure everyone had seen the email.</td></tr>
+<tr><td>27 Oct 2026</td><td>Two members chose their sections and agreed that I continue as team leader. I asked the remaining member to get in touch.</td><td>Roles mostly settled.</td></tr>
+<tr><td>28 Oct 2026</td><td>Defined how the system should behave step by step, then reviewed which theory from Units 3 and 4 matched it.</td><td>Learned to fix the behaviour first, then choose the theory.</td></tr>
+<tr><td>30 Oct 2026</td><td>Updated the tutor on team communication; the tutor advised us to continue as planned and contacted the member directly. Sent the team a comparison of free tools and my proposal.</td><td>Was honest that I had not used the tools myself and asked for the team's experience.</td></tr>
+<tr><td>1 Nov 2026</td><td>Sent the team an initial architecture and the system steps for discussion, and corrected an earlier statement about the project domain.</td><td>Correcting myself openly felt important for trust in the team.</td></tr>
+<tr><td>3 Nov 2026</td><td>Created a WhatsApp group. Members confirmed they would review the proposals, and one asked for a contingency plan, so I proposed one. The remaining member then replied and joined the team.</td><td>A backup plan reassures the team, even if it is not needed.</td></tr>
+<tr><td>3 Nov 2026</td><td>Found that the department requires a signed team contract. Filled in the official template for the team to agree by email.</td><td>We had missed this at the start, so I fixed it.</td></tr>
+</tbody></table></div>
+      </div>
+    </details>
+    <section class="card prose overview"><h2>Unit References</h2>
+<ul>
+<li>Bratman, M.E., Israel, D.J. and Pollack, M.E. (1988) Plans and resource-bounded practical reasoning. <em>Computational Intelligence</em> 4(3): 349&ndash;355.</li>
+<li>Brooks, R.A. (1991) Intelligence without representation. <em>Artificial Intelligence</em> 47(1&ndash;3): 139&ndash;159.</li>
+<li>Russell, S. and Norvig, P. (2021) <em>Artificial Intelligence: A Modern Approach</em>. 4th ed. Harlow: Pearson.</li>
+<li>Wooldridge, M. (2009) <em>An Introduction to MultiAgent Systems</em>. 2nd ed. New York: John Wiley &amp; Sons.</li>
+<li>Wooldridge, M. and Jennings, N.R. (1995) Intelligent agents: theory and practice. <em>The Knowledge Engineering Review</em> 10(2): 115&ndash;152.</li>
+</ul>
     </section>
   </main>
   <footer class="footer">
