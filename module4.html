@@ -279,7 +279,17 @@
 <p>The main difference is that KQML sends a request to an independent agent, which can accept or reject it based on its capabilities and goals. In contrast, method invocation directly calls a method to perform a specific task, without giving the receiving component the same level of decision-making autonomy (Jennings, 2000).</p>
 <p>In my opinion, KQML is more suitable for systems where independent agents need to communicate and cooperate, while method invocation is more suitable for simple systems with predefined tasks. For example, a multi-agent system can use a simple communication approach inspired by KQML, with only a few message types such as request, result, error and done. This keeps the intent of each message clear without adding complexity. Using a multi-agent system does not necessarily mean using the full KQML language, but rather choosing what suits the project's requirements and size.</p>
 <h3>Peer Responses</h3>
-<p><em>To be added in Unit 6.</em></p>
+<p><strong>To Igor:</strong></p>
+<p>Thank you, Igor, for a very detailed post. I especially liked your point that the real difference between KQML and method invocation is about who decides, not how the message is delivered.</p>
+<p>I agree with your conclusion that method invocation belongs inside an agent and an agent protocol between agents. In practice, this seems like a balanced approach: inside each agent, normal method calls keep the code simple and easy to test, while between agents a small set of clear message types can show the intent of each request without the full complexity of KQML (Finin et al., 1994).</p>
+<p>I also found your point about A2A and LLMs interesting, especially the risk that a misunderstanding appears as a plausible wrong answer rather than an error. In my view, this makes human oversight more important when an LLM infers intent. For example, in systems where an LLM acts as a controller that plans subtasks and assigns them to other components, as in HuggingGPT (Shen et al., 2023), asking the user to confirm the plan before it runs could catch a misunderstood request early, before it affects the final result.</p>
+<p>Do you think newer protocols such as A2A should include a simple confirmation step like this, or should it stay outside the protocol, in the application itself?</p>
+<p><strong>To Mark:</strong></p>
+<p>Thank you, Mark, for your clear post. I liked your idea of "agreement without disclosure", because this is something method invocation cannot do.</p>
+<p>I agree that method invocation is the better choice when the components are known and trusted. I think the choice depends on the relationship between the components, not only on the technology. If one team designs all the agents, a small set of simple message types may be enough, because all the agents already understand the same meanings. But if the agents are built by different organisations, they need a more complete language and a shared ontology (Labrou, Finin and Peng, 1999).</p>
+<p>I also agree with your point about the cost of dialogue. More messages mean more delay, and if the performatives are not clear, the agents can still misunderstand each other. This is one of the reasons FIPA ACL later gave messages a clearer meaning than KQML (Wooldridge, 2009).</p>
+<p>However, I am not sure the privacy benefit is important in every system. When the agents belong to the same organisation, they usually do not need to hide information from each other, so the extra messages may add cost but give little benefit.</p>
+<p>In your opinion, which kinds of systems really need this level of privacy between agents?</p>
 <h3>Summary Post</h3>
 <p><em>To be added in Unit 7.</em></p>
 <h3>References</h3>
@@ -287,6 +297,7 @@
 <li>Finin, T., Fritzson, R., McKay, D. and McEntire, R. (1994) KQML as an agent communication language. <em>Proceedings of the Third International Conference on Information and Knowledge Management</em>. New York: ACM, 456&ndash;463.</li>
 <li>Jennings, N.R. (2000) On agent-based software engineering. <em>Artificial Intelligence</em> 117(2): 277&ndash;296.</li>
 <li>Labrou, Y., Finin, T. and Peng, Y. (1999) Agent communication languages: the current landscape. <em>IEEE Intelligent Systems</em> 14(2): 45&ndash;52.</li>
+<li>Shen, Y., Song, K., Tan, X., Li, D., Lu, W. and Zhuang, Y. (2023) HuggingGPT: Solving AI tasks with ChatGPT and its friends in Hugging Face. <em>Advances in Neural Information Processing Systems</em> 36.</li>
 <li>Wooldridge, M.J. (2009) <em>An Introduction to MultiAgent Systems</em>. 2nd edn. Chichester: John Wiley &amp; Sons.</li>
 </ul>
       </div>
