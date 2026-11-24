@@ -46,7 +46,11 @@
         <a class="chip" href="#unit-1">Unit 1</a>
         <a class="chip" href="#unit-2">Unit 2</a>
         <a class="chip" href="#unit-3">Unit 3</a>
+        <a class="chip" href="#unit-4">Unit 4</a>
+        <a class="chip" href="#unit-5">Unit 5</a>
+        <a class="chip" href="#unit-6">Unit 6</a>
         <a class="chip" href="#cd1">Collaborative Discussion 1</a>
+        <a class="chip" href="#cd2">Collaborative Discussion 2</a>
         <a class="chip" href="#team-project">Team Project Log</a>
     </nav>
 
@@ -115,6 +119,109 @@
       </div>
     </details>
 
+    <details class="unit card" id="unit-4">
+      <summary><span class="badge">Unit 4</span><span class="unit-title">Hybrid Agent Architectures</span><span class="unit-tags"><span class="tag">Key Topics</span><span class="tag">Learning Activities</span><span class="tag">Reflection</span></span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="unit-body prose">
+<h3>Key Topics</h3>
+<ul>
+<li>Why hybrid architectures: combining fast reactive behaviour with planning by dividing an agent into layers (Wooldridge, 2009).</li>
+<li>Horizontal layering, where every layer proposes an action and a control subsystem chooses (e.g. TouringMachines).</li>
+<li>Vertical layering, one-pass and two-pass, with bottom-up activation and top-down execution (e.g. InteRRaP).</li>
+<li>The 3T architecture: planning, sequencing and skills (Bonasso et al., 1997).</li>
+<li>Critique of layered designs: practical and widely used, but harder to analyse, and layer interactions can be complex.</li>
+</ul>
+<h3>Learning Activities</h3>
+<ul>
+<li>Studied Section 5.2 of Wooldridge (2009) and the Unit 4 lecturecast.</li>
+<li>Attended the Unit 4 seminar on hybrid architectures, their trade-offs (inter-layer latency, state consistency and design complexity) and the team assessment.</li>
+<li>Used the unit to finalise our team's architecture: a Planner-led multi-agent system inspired by the functional separation in 3T.</li>
+</ul>
+<h3>Reflection</h3>
+<p>This unit helped me describe our team design honestly. At first I wanted to call it a vertical layered architecture, but I realised that 3T, InteRRaP and TouringMachines all describe layers inside one agent, while our system has four separate agents. So we described it as "inspired by" 3T rather than claiming it is 3T. The seminar also made me think about the weakness of our design: the Planner coordinates everything, so it can become a single point of failure. This is why limited retries and clear error messages became part of our design.</p>
+      </div>
+    </details>
+
+    <details class="unit card" id="unit-5">
+      <summary><span class="badge">Unit 5</span><span class="unit-title">Agent Communication</span><span class="unit-tags"><span class="tag">Key Topics</span><span class="tag">Learning Activities</span><span class="tag">Reflection</span></span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="unit-body prose">
+<h3>Key Topics</h3>
+<ul>
+<li>Speech act theory: speaking is a form of action, and every message has a purpose (performative) and a content (Searle, 1969).</li>
+<li>KQML as the outer language of a message (performative, sender, receiver, reply links) and KIF as the content language, based on first-order logic (Finin et al., 1994).</li>
+<li>Ontologies as a shared vocabulary, and aligning different ontologies through dialogue without revealing everything (Payne and Tamma, 2014).</li>
+<li>Weaknesses of KQML: loose semantics, poor interoperability between implementations and no commissive performatives.</li>
+</ul>
+<h3>Learning Activities</h3>
+<ul>
+<li>Watched the Unit 5 lecturecast and read Finin et al. (1994) and Payne and Tamma (2014).</li>
+<li>Posted my Initial Post for Collaborative Discussion 2 on agent communication languages (see below).</li>
+<li>Continued leading the team project: reviewed the first drafts of all four sections and gave feedback.</li>
+</ul>
+<h3>Reflection</h3>
+<p>KQML was easier for me to understand when I compared it to a network packet: the KQML part works like the header, saying who sends the message, to whom and what kind of message it is, while the KIF content is like the payload. This unit also explained a decision in our team project. We chose a small set of message types inspired by KQML instead of the full language, because all our agents are built by one team and in one language. We kept the clear intent of each message without the extra complexity.</p>
+      </div>
+    </details>
+
+    <details class="unit card" id="unit-6">
+      <summary><span class="badge">Unit 6</span><span class="unit-title">Working Together</span><span class="unit-tags"><span class="tag">Key Topics</span><span class="tag">Learning Activities</span><span class="tag">Agent Dialogue</span><span class="tag">Reflection</span></span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="unit-body prose">
+<h3>Key Topics</h3>
+<ul>
+<li>Agent dialogues: chains of KQML messages linked by <code>:reply-with</code> and <code>:in-reply-to</code>.</li>
+<li>Facilitators: special agents that know what other agents can do and route requests to them (Finin et al., 1994).</li>
+<li>Evaluating agent communication languages: strengths (separating purpose from content, linked messages, extensibility) and weaknesses (verbosity, unclear semantics, the need for a shared ontology), and the later move to FIPA-ACL (Wooldridge, 2009).</li>
+</ul>
+<h3>Learning Activities</h3>
+<ul>
+<li>Studied the Unit 6 materials on agent dialogues and facilitators.</li>
+<li>Wrote peer responses in Collaborative Discussion 2.</li>
+<li>Completed the e-Portfolio activity "Creating Agent Dialogues" (below).</li>
+<li>Coordinated the final sections of the team report before combining and submitting it.</li>
+</ul>
+<h3>e-Portfolio Activity: Creating Agent Dialogues</h3>
+<p><strong>Task:</strong> create a KQML and KIF dialogue between Alice, an agent that procures stock, and Bob, an agent that controls the stock levels of a warehouse. Alice asks Bob about the available stock of 50-inch televisions and the number of HDMI slots they have.</p>
+<pre><code>; 1. Alice asks Bob about the stock of 50-inch TVs
+(ask-one
+   :sender      Alice
+   :receiver    Bob
+   :language    KIF
+   :ontology    warehouse-stock
+   :reply-with  q1
+   :content     (stock-level tv-50inch ?quantity))
+
+; 2. Bob replies: 80 units in stock
+(tell
+   :sender       Bob
+   :receiver     Alice
+   :language     KIF
+   :ontology     warehouse-stock
+   :in-reply-to  q1
+   :content      (stock-level tv-50inch 80))
+
+; 3. Alice asks Bob about the number of HDMI slots
+(ask-one
+   :sender      Alice
+   :receiver    Bob
+   :language    KIF
+   :ontology    warehouse-stock
+   :reply-with  q2
+   :content     (hdmi-slots tv-50inch ?slots))
+
+; 4. Bob replies: 3 HDMI slots
+(tell
+   :sender       Bob
+   :receiver     Alice
+   :language     KIF
+   :ontology     warehouse-stock
+   :in-reply-to  q2
+   :content      (hdmi-slots tv-50inch 3))</code></pre>
+<p><strong>Explanation.</strong> In this dialogue, Alice uses the <em>ask-one</em> performative because she needs one specific value from Bob, and Bob uses <em>tell</em> to give her the answer. Each question has its own label (<code>:reply-with q1</code> and <code>q2</code>), and Bob uses <code>:in-reply-to</code> in his answers, so Alice knows which answer belongs to which question. This is useful when an agent sends more than one question at the same time.</p>
+<p>The content is written in KIF, where the relation comes first, then the object, then the value. A variable such as <code>?quantity</code> shows the value Alice is asking for. Both agents use the same ontology (<em>warehouse-stock</em>), so they understand terms such as <em>stock-level</em> and <em>hdmi-slots</em> in the same way. Without this shared ontology, Bob might not understand what Alice is asking for (Finin et al., 1994; Wooldridge, 2009).</p>
+<h3>Reflection</h3>
+<p>Writing the dialogue myself showed me small details that I missed when only reading about KQML. My first attempts used the wrong performative for Bob's answer and the same label for both questions, which would have made it impossible for Alice to match each answer to its question. This made the role of <code>:reply-with</code> and <code>:in-reply-to</code> very clear to me. It also connected to our team project, where each message carries a question identifier for the same reason, and where the Planner routes all messages in a way similar to a facilitator.</p>
+      </div>
+    </details>
+
     <details class="unit card" id="cd1">
       <summary><span class="badge">e-Portfolio</span><span class="unit-title">Collaborative Discussion 1: Agent Based Systems</span><span class="unit-tags"><span class="tag">Initial Post</span><span class="tag">Feedback</span><span class="tag">Peer Responses</span><span class="tag">Summary</span></span><span class="chev" aria-hidden="true"></span></summary>
       <div class="unit-body prose">
@@ -161,6 +268,30 @@
       </div>
     </details>
 
+    <details class="unit card" id="cd2">
+      <summary><span class="badge">e-Portfolio</span><span class="unit-title">Collaborative Discussion 2: Agent Communication Languages</span><span class="unit-tags"><span class="tag">Initial Post</span><span class="tag">Peer Responses</span><span class="tag">Summary</span></span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="unit-body prose">
+<p><strong>Question:</strong> What are the potential advantages and disadvantages of the use of agent communication languages such as KQML? How do they compare with method invocation in Python or Java?</p>
+<h3>Initial Post</h3>
+<p>KQML, which stands for Knowledge Query and Manipulation Language, provides a common language that allows agents to communicate and exchange information and requests. It helps each agent understand the purpose of the message it receives (Finin et al., 1994).</p>
+<p>A main advantage of KQML is that it makes communication easier between agents built with different technologies (Labrou, Finin and Peng, 1999). It also allows agents to request information or send results without knowing how the other agent works. Another advantage is that new agents can be added without redesigning the whole system, as long as they follow the same communication protocol.</p>
+<p>On the other hand, KQML may increase system complexity because of the different types of messages. It also does not guarantee that all agents understand the message content in the same way, so a shared ontology is needed (Wooldridge, 2009). Exchanging and processing messages also adds time and computational cost.</p>
+<p>The main difference is that KQML sends a request to an independent agent, which can accept or reject it based on its capabilities and goals. In contrast, method invocation directly calls a method to perform a specific task, without giving the receiving component the same level of decision-making autonomy (Jennings, 2000).</p>
+<p>In my opinion, KQML is more suitable for systems where independent agents need to communicate and cooperate, while method invocation is more suitable for simple systems with predefined tasks. For example, a multi-agent system can use a simple communication approach inspired by KQML, with only a few message types such as request, result, error and done. This keeps the intent of each message clear without adding complexity. Using a multi-agent system does not necessarily mean using the full KQML language, but rather choosing what suits the project's requirements and size.</p>
+<h3>Peer Responses</h3>
+<p><em>To be added in Unit 6.</em></p>
+<h3>Summary Post</h3>
+<p><em>To be added in Unit 7.</em></p>
+<h3>References</h3>
+<ul>
+<li>Finin, T., Fritzson, R., McKay, D. and McEntire, R. (1994) KQML as an agent communication language. <em>Proceedings of the Third International Conference on Information and Knowledge Management</em>. New York: ACM, 456&ndash;463.</li>
+<li>Jennings, N.R. (2000) On agent-based software engineering. <em>Artificial Intelligence</em> 117(2): 277&ndash;296.</li>
+<li>Labrou, Y., Finin, T. and Peng, Y. (1999) Agent communication languages: the current landscape. <em>IEEE Intelligent Systems</em> 14(2): 45&ndash;52.</li>
+<li>Wooldridge, M.J. (2009) <em>An Introduction to MultiAgent Systems</em>. 2nd edn. Chichester: John Wiley &amp; Sons.</li>
+</ul>
+      </div>
+    </details>
+
     <details class="unit card" id="team-project">
       <summary><span class="badge">Team</span><span class="unit-title">Development Team Project Log</span><span class="unit-tags"><span class="tag">Team Leader</span><span class="tag">Collaboration</span></span><span class="chev" aria-hidden="true"></span></summary>
       <div class="unit-body prose">
@@ -181,10 +312,14 @@
     </details>
     <section class="card prose overview"><h2>Unit References</h2>
 <ul>
+<li>Bonasso, R.P., Firby, R.J., Gat, E., Kortenkamp, D., Miller, D.P. and Slack, M.G. (1997) Experiences with an architecture for intelligent, reactive agents. <em>Journal of Experimental &amp; Theoretical Artificial Intelligence</em> 9(2&ndash;3): 237&ndash;256.</li>
 <li>Bratman, M.E., Israel, D.J. and Pollack, M.E. (1988) Plans and resource-bounded practical reasoning. <em>Computational Intelligence</em> 4(3): 349&ndash;355.</li>
 <li>Brooks, R.A. (1991) Intelligence without representation. <em>Artificial Intelligence</em> 47(1&ndash;3): 139&ndash;159.</li>
+<li>Finin, T., Fritzson, R., McKay, D. and McEntire, R. (1994) KQML as an agent communication language. <em>Proceedings of the Third International Conference on Information and Knowledge Management</em>. New York: ACM, 456&ndash;463.</li>
+<li>Payne, T.R. and Tamma, V. (2014) Negotiating over ontological correspondences with asymmetric and incomplete knowledge. <em>Proceedings of the 13th International Conference on Autonomous Agents and Multiagent Systems</em>, 517&ndash;524.</li>
 <li>Russell, S. and Norvig, P. (2021) <em>Artificial Intelligence: A Modern Approach</em>. 4th ed. Harlow: Pearson.</li>
-<li>Wooldridge, M. (2009) <em>An Introduction to MultiAgent Systems</em>. 2nd ed. New York: John Wiley &amp; Sons.</li>
+<li>Searle, J.R. (1969) <em>Speech Acts: An Essay in the Philosophy of Language</em>. Cambridge: Cambridge University Press.</li>
+<li>Wooldridge, M. (2009) <em>An Introduction to MultiAgent Systems</em>. 2nd ed. Chichester: John Wiley &amp; Sons.</li>
 <li>Wooldridge, M. and Jennings, N.R. (1995) Intelligent agents: theory and practice. <em>The Knowledge Engineering Review</em> 10(2): 115&ndash;152.</li>
 </ul>
     </section>
